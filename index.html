@@ -4,38 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Play|Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/sass/style.css">
     <title>ArchiGraph</title>
 </head>
 <body>
-    <header>
-        <div class="header__logo">
-            <img src="./assets/img/header_logo.png" alt="logo">
+    <header class="header">
+        <div class="header__logo-wrapper">
+            <a href="#" class="header__logo"></a>
+            <p class="header__logo-title">АрхиГраф</p>
         </div>
         <div class="header__nav">
-            <div class="header__nav-item">
-                <a href="#1" class="header__nav-link"></a>
-            </div>
-            <div class="header__nav-item">
-                <a href="#2" class="header__nav-link"></a>
-            </div>
-            <div class="header__nav-item">
-                <a href="#3" class="header__nav-link"></a>
-            </div>
-            <div class="header__nav-item">
-                <a href="#4" class="header__nav-link"></a>
-            </div>
-            <div class="header__nav-item">
-                <a href="#5" class="header__nav-link"></a>
-            </div>
+            <a href="#1" class="header__nav-item header__nav-item--active"></a>
+            <a href="#2" class="header__nav-item"></a>
+            <a href="#3" class="header__nav-item"></a>
+            <a href="#4" class="header__nav-item"></a>
+            <a href="#5" class="header__nav-item"></a>
         </div>
-        <div class="header__title">
-
-        </div>
+        <p class="header__title">Продукты  компании  ТриниДата</p>
         <div class="header__lang-selector">
-
+            <a href="#" class="header__lang-selector-item">RU</a>
+            <a href="#" class="header__lang-selector-item">EN</a>
         </div>
     </header>
+    <section class="slider-screen" id="1">
+        <div class="slider-screen__left">
+            <img src="./assets/img/logo_big.png" alt="logo" class="slider__logo">
+            <div class="slider__controls">
+                <div class="slider__controls-item">
+    
+                </div>
+                <div class="slider__controls-item">
+    
+                </div>
+                <div class="slider__controls-item">
+    
+                </div>
+                <div class="slider__controls-item">
+    
+                </div>
+                <div class="slider__controls-item">
+    
+                </div>
+            </div>
+        </div>
+        <div class="slider-screen__right">
+            <div class="slider">
+                <div class="slider__wrapper">
+                    <div class="slide">
+                        <div class="slide__text">
+                            <div class="slide__title"></div>
+                            <div class="slide__description"></div>
+                        </div>
+                        <div class="slide__img"></div>
+                    </div>
+                    <div class="slide">
+    
+                    </div>
+                    <div class="slide">
+    
+                    </div>
+                    <div class="slide">
+    
+                    </div>
+                    <div class="slide">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="components" id="2">
+        <h2 class="title">Компоненты платформы АрхиГраф</h2>
+        <h3 class="subtitle">Выберите продукт:</h3>
+        <div class="products__wrapper">
+            <div class="product">
+                <div class="product__icon"></div>
+                <div class="product__description"></div>
+            </div>
+            <div class="product">
+                <div class="product__icon"></div>
+                <div class="product__description"></div>
+            </div>
+            <div class="product">
+                <div class="product__icon"></div>
+                <div class="product__description"></div>
+            </div>
+        </div>
+        <h3 class="subtitle">Назначение продукта АрхиГраф.Мир:</h3>
+        <p class="text">Работа с&nbsp;онтологической моделью и&nbsp;данными, представленными в&nbsp;соответствии с&nbsp;ней. Быстрая обработка больших массивов данных в&nbsp;онтологической модели.</p>
+        <div class="functionality__wrapper">
+            <div class="functionality__description">
+                <h3 class="subtitle">Функциональность:</h3>
+                <ol class="functionality__list">
+                    <li class="functionality__list-item">Запросы на&nbsp;извлечение и&nbsp;редактирование любых объектов и&nbsp;модели данных при помощи REST API, SOAP-сервиса, очередей MQ.</li>
+                    <li class="functionality__list-item">Выполнение групповых операций с&nbsp;объектами.</li>
+                    <li class="functionality__list-item">Хранение объектов данных в&nbsp;любых внешних хранилищах.</li>
+                    <li class="functionality__list-item">Доступ ко&nbsp;всем данным с&nbsp;помощью точки доступа SPARQL.</li>
+                    <li class="functionality__list-item">Возможности геопоиска и&nbsp;полнотекстового поиска.</li>
+                    <li class="functionality__list-item">Подписки на&nbsp;обновление данных определенных классов.</li>
+                    <li class="functionality__list-item">Инструменты Data governance: поддержка процессов согласования изменений в&nbsp;модели и&nbsp;данных.</li>
+                    <li class="functionality__list-item">Разграничение прав доступа на&nbsp;уровне классов модели. Протоколирование доступа.</li>
+                    <li class="functionality__list-item">Работа в&nbsp;режиме кластера.</li>
+                    <li class="functionality__list-item">Историйность модели: возможность получить любое предыдущее состояние модели.</li>
+                    <li class="functionality__list-item">Историйность и&nbsp;прослеживание происхождения данных (Data lineage). API для получения истории изменений любого элемента данных.</li>
+                    <li class="functionality__list-item">Работа в&nbsp;режиме Логической витрины данных: извлечение информации из&nbsp;удаленных источников при помощи правил мэппинга элементов онтологии и&nbsp;структуры хранилища.</li>
+                </ol>
+            </div>
+            <div class="functionality__img"></div>
+        </div>
+    </section>
+    <section class="docs" id="3">
+        <h2 class="title">Документация</h2>
+        <div class="docs__group">
+            <h3 class="subtitle">Инструменты аналитика:</h3>
+            <div class="docs__item">
+                <div class="docs__icon"></div>
+                <div class="docs__title">Работа с&nbsp;моделью и&nbsp;данными в&nbsp;АрхиГраф.Мир</div>
+            </div>
+            <div class="docs__item">
+                <div class="docs__icon"></div>
+                <div class="docs__title">Поиск и&nbsp;создание правил логического вывода в&nbsp;АрхиГраф.СУЗ</div>
+            </div>
+        </div>
+        <div class="docs__group">
+            <h3 class="subtitle">Инструменты администратора:</h3>
+            <div class="docs__item">
+                <div class="docs__icon"></div>
+                <div class="docs__title">Администрирование АрхиГраф.Мир</div>
+            </div>
+            <div class="docs__item">
+                <div class="docs__icon"></div>
+                <div class="docs__title">Администрирование АрхиГраф.MDM</div>
+            </div>
+        </div>
+        <div class="docs__group">
+            <h3 class="subtitle">Инструменты разработчика:</h3>
+            <div class="docs__item">
+                <div class="docs__icon"></div>
+                <div class="docs__title">API АрхиГраф.MDM</div>
+            </div>
+        </div>
+    </section>
+    <section class="sheets" id="4">
+        <h2 class="title">Методические материалы</h2>
+        <div class="sheets__wrapper">
+            <sheets__item>
+                <img src="" alt="" class="sheets__item-img">
+                <div class="sheets__item-title">Введение в&nbsp;онтологическое моделирование</div>
+                <button class="download-btn">СКАЧАТЬ .pdf</button>
+            </sheets__item>
+            <sheets__item>
+                <img src="" alt="" class="sheets__item-img">
+                <div class="sheets__item-title">Онтологическое моделирование предприятий: методы и&nbsp;технологии</div>
+                <button class="download-btn">СКАЧАТЬ .pdf</button>
+            </sheets__item>
+        </div>
+    </section>
     
 </body>
 </html>

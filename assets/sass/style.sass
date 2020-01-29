@@ -1,0 +1,154 @@
+$black-text: #222222
+$yellow: #F0C73F
+$white: #ffffff
+$gray: #4C4C4C
+
+html
+    scroll-behavior: smooth
+    color: $black-text
+    font-family: 'Montserrat', sans-serif
+p
+    font-size: 16px
+    line-height: 23px
+.header
+    position: fixed
+    height: 100vh
+    width: 143px
+    top: 0
+    left: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    padding-top: 29px
+    padding-bottom: 45px
+    box-sizing: border-box
+    background: $white
+    z-index: 1
+
+    &__logo
+        display: block
+        width: 52px
+        height: 52px
+        background-image: url('../img/header_logo.png')
+        background-size: contain
+        &:hover
+            background-image: url('../img/logo_big.png')
+        &-wrapper
+            display: flex
+            flex-direction: column
+            align-items: center
+        &-title
+            font-family: 'Poiret One', cursive
+            font-size: 24px
+            line-height: 28px
+            margin-top: 8px
+
+    &__title
+        writing-mode: vertical-rl
+        font-size: 12px
+        position: relative
+        text-transform: uppercase
+        transform: rotate(180deg)
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            bottom: 0
+            width: 78px
+            height: 1px
+            background: $yellow
+            transform-origin: 100%
+            transform: rotate(90deg)
+
+    &__nav
+        height: 165px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        &-item
+            display: block
+            position: relative
+            width: 7px
+            height: 7px
+            background: $black-text
+            &::after
+                content: ''
+                position: absolute
+                display: block
+                left: 50%
+                top: 50%
+                width: 17px
+                height: 17px
+                border: 1px solid $black-text
+                transform: translate(-10px, -10px) scale(0)
+                transition: transform ease-in-out .33s
+            &--active
+                &::after
+                    transform: translate(-10px, -10px) scale(1)
+
+    &__lang-selector
+        position: relative
+        display: flex
+        &::before,
+        &::after
+            content: ''
+            display: block
+            position: absolute
+        &::before
+            top: 0
+            left: 50%
+            height: 19px
+            width: 1px
+            background: $black-text
+        &::after
+            bottom: 0
+            right: 10px
+            width: 20px
+            height: 2px
+            background: $yellow
+        &-item
+            font-size: 16px
+            line-height: 20px
+            margin: 0 10px
+            &:first-child
+                font-weight: bold
+            &:last-child
+                font-weight: normal
+                &:hover
+                    color: $yellow
+
+        &--en
+            &::after
+                right: auto
+                left: 10px
+            .header__lang-selector
+                &-item
+                    &:first-child
+                        font-weight: normal
+                        &:hover
+                            color: $yellow
+                    &:last-child
+                        font-weight: bold
+                        &:hover
+                            color: $black-text
+                
+
+
+
+section
+    padding-left: 239px
+
+.slider-screen
+    display: flex
+    height: 100vh
+    &__left
+        position: relative
+        background: linear-gradient(214.79deg, rgba(255, 255, 255, 0.1) 13.87%, rgba(255, 255, 255, 0) 69.02%), linear-gradient(0deg, #222222, #222222), linear-gradient(56.24deg, #FFE989 8.41%, #D35DA4 87.89%)
+    &__right
+        position: relative
+        background: linear-gradient(152.02deg, #FFF1B8 0.98%, #FFEC9C 33.45%, #FFEA8F 68.32%, #F6D64C 109.88%), linear-gradient(0deg, #FFEC9C, #FFEC9C), linear-gradient(0deg, #FFE574, #FFE574), linear-gradient(182.58deg, #FFE574 49.97%, #FFEC9C 105.18%)
+    .slider
+        &__logo
+            position: absolute
+            top: 85px
