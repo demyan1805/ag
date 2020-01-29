@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Play|Poiret+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/sass/style.css">
+    <script src="./assets/js/script.js"></script>
     <title>ArchiGraph</title>
 </head>
 <body>
@@ -29,50 +30,73 @@
         </div>
     </header>
     <section class="slider-screen" id="1">
-        <div class="slider-screen__left">
-            <img src="./assets/img/logo_big.png" alt="logo" class="slider__logo">
-            <div class="slider__controls">
-                <div class="slider__controls-item">
-    
+        <div class="scroll-hint">
+            <img src="" alt="">
+        </div>
+        <img src="./assets/img/logo_big.png" alt="logo" class="slider__logo">
+        <div class="slider__controls">
+            <div class="slider__controls-item">
+                <p class="slider__controls-text">Дата-центрическая архитектура</p>
                 </div>
                 <div class="slider__controls-item">
-    
+                    <p class="slider__controls-text">Адаптация к&nbsp;изменениям</p>
                 </div>
                 <div class="slider__controls-item">
-    
+                    <p class="slider__controls-text">Независимость от&nbsp;производителей</p>
                 </div>
                 <div class="slider__controls-item">
-    
+                    <p class="slider__controls-text">Итегрированное управление</p>
                 </div>
                 <div class="slider__controls-item">
-    
+                    <p class="slider__controls-text">Быстрый доступ</p>
                 </div>
             </div>
+            <div class="slider-screen__right">
         </div>
-        <div class="slider-screen__right">
-            <div class="slider">
-                <div class="slider__wrapper">
-                    <div class="slide">
-                        <div class="slide__text">
-                            <div class="slide__title"></div>
-                            <div class="slide__description"></div>
-                        </div>
-                        <div class="slide__img-wrapper">
-                            <img src="" alt="" class="slider__img">
-                        </div>
-                    </div>
-                    <div class="slide">
-    
-                    </div>
-                    <div class="slide">
-    
-                    </div>
-                    <div class="slide">
-    
-                    </div>
-                    <div class="slide">
-    
-                    </div>
+        <div class="slider">
+            <div class="slide">
+                <div class="slide__text">
+                    <h1 class="slide__title slide__title--main">АрхиГраф</h1>
+                    <div class="slide__description">платформа для построения дата-центрической архитектуры автоматизированных систем</div>
+                </div>
+                <div class="slide__img-wrapper">
+                    <img src="./assets/img/slide1.png" alt="slide1" class="slide__img">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide__text">
+                    <h1 class="slide__title">Высокая скорость адаптации к&nbsp;изменениям</h1>
+                    <div class="slide__description">Приложения готовы к&nbsp;изменению структуры данных</div>
+                </div>
+                <div class="slide__img-wrapper">
+                    <img src="./assets/img/slide1.png" alt="slide1" class="slide__img">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide__text">
+                    <h1 class="slide__title">Независимость от производителей ПО</h1>
+                    <div class="slide__description">Можно заменять любые приложения или саму платформу – данные и способы работы с ними останутся неизменными</div>
+                </div>
+                <div class="slide__img-wrapper">
+                    <img src="./assets/img/slide1.png" alt="slide1" class="slide__img">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide__text">
+                    <h1 class="slide__title">Управление алгоритмами обработки данных вместе с их структурой</h1>
+                    <div class="slide__description">Платформа хранит правила доступа, преобразования данных, построения интерфейсов, которые должны выполнять приложения</div>
+                </div>
+                <div class="slide__img-wrapper">
+                    <img src="./assets/img/slide1.png" alt="slide1" class="slide__img">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide__text">
+                    <h1 class="slide__title">Быстрый доступ к ограниченным объемам информации</h1>
+                    <div class="slide__description">благодаря современным технологиям кластеризации и масштабирования</div>
+                </div>
+                <div class="slide__img-wrapper">
+                    <img src="./assets/img/slide1.png" alt="slide1" class="slide__img">
                 </div>
             </div>
         </div>
@@ -82,20 +106,35 @@
         <h3 class="subtitle">Выберите продукт:</h3>
         <div class="products__wrapper">
             <div class="product">
-                <div class="product__icon"></div>
-                <div class="product__description"></div>
+                <div class="product__icon">
+                    <img src="./assets/img/ag_m.svg" alt="archigraph mir">
+                </div>
+                <div class="product__description">
+                    <p class="product__title">АрхиГраф.<span class='mir'>МИР</span></p>
+                    <p class="product__subtitle">Редактор онтологий</p>
+                </div>
             </div>
             <div class="product">
-                <div class="product__icon"></div>
-                <div class="product__description"></div>
+                <div class="product__icon">
+                    <img src="./assets/img/ag_suz.svg" alt="archigraph suz">
+                </div>
+                <div class="product__description">
+                    <p class="product__title">АрхиГраф.<span class='suz'>СУЗ</span></p>
+                    <p class="product__subtitle">Программный интерфейс<br>доступа к&nbsp;данным</p>
+                </div>
             </div>
             <div class="product">
-                <div class="product__icon"></div>
-                <div class="product__description"></div>
+                <div class="product__icon">
+                    <img src="./assets/img/ag_mdm.svg" alt="archigraph mdm">
+                </div>
+                <div class="product__description">
+                    <p class="product__title">АрхиГраф.<span class='mdm'>МДМ</span></p>
+                    <p class="product__subtitle">Инструмент редактирования<br>правил и&nbsp;исследования данных</p>
+                </div>
             </div>
         </div>
         <h3 class="subtitle">Назначение продукта АрхиГраф.Мир:</h3>
-        <p class="text mb--40">Работа с&nbsp;онтологической моделью и&nbsp;данными, представленными в&nbsp;соответствии с&nbsp;ней. Быстрая обработка больших массивов данных в&nbsp;онтологической модели.</p>
+        <p class="text mb--40 mw--half">Работа с&nbsp;онтологической моделью и&nbsp;данными, представленными в&nbsp;соответствии с&nbsp;ней. Быстрая обработка больших массивов данных в&nbsp;онтологической модели.</p>
         <div class="functionality__wrapper">
             <div class="functionality__description">
                 <h3 class="subtitle">Функциональность:</h3>
@@ -121,51 +160,61 @@
     </section>
     <section class="docs" id="3">
         <h2 class="title">Документация</h2>
-        <div class="docs__group">
-            <h3 class="subtitle">Инструменты аналитика:</h3>
-            <div class="docs__item">
-                <div class="docs__icon"></div>
-                <div class="docs__title">Работа с&nbsp;моделью и&nbsp;данными в&nbsp;АрхиГраф.Мир</div>
+        <div class="docs__wrapper">
+            <div class="docs__group">
+                <h3 class="subtitle">Инструменты аналитика:</h3>
+                <a href="#" class="docs__item">
+                    <div class="docs__icon"></div>
+                    <div class="docs__title">Работа с&nbsp;моделью и&nbsp;данными в&nbsp;АрхиГраф<b>.Мир</b></div>
+                </a>
+                <a href="#" class="docs__item">
+                    <div class="docs__icon"></div>
+                    <div class="docs__title">Поиск и&nbsp;создание правил логического вывода в&nbsp;АрхиГраф<b>.СУЗ</b></div>
+                </a>
             </div>
-            <div class="docs__item">
-                <div class="docs__icon"></div>
-                <div class="docs__title">Поиск и&nbsp;создание правил логического вывода в&nbsp;АрхиГраф.СУЗ</div>
+            <div class="docs__group">
+                <h3 class="subtitle">Инструменты администратора:</h3>
+                <a href="#" class="docs__item">
+                    <div class="docs__icon"></div>
+                    <div class="docs__title">Администрирование АрхиГраф<b>.Мир</b></div>
+                </a>
+                <a href="#" class="docs__item">
+                    <div class="docs__icon"></div>
+                    <div class="docs__title">Администрирование АрхиГраф<b>.MDM</b></div>
+                </a>
             </div>
-        </div>
-        <div class="docs__group">
-            <h3 class="subtitle">Инструменты администратора:</h3>
-            <div class="docs__item">
-                <div class="docs__icon"></div>
-                <div class="docs__title">Администрирование АрхиГраф.Мир</div>
-            </div>
-            <div class="docs__item">
-                <div class="docs__icon"></div>
-                <div class="docs__title">Администрирование АрхиГраф.MDM</div>
-            </div>
-        </div>
-        <div class="docs__group">
-            <h3 class="subtitle">Инструменты разработчика:</h3>
-            <div class="docs__item">
-                <div class="docs__icon"></div>
-                <div class="docs__title">API АрхиГраф.MDM</div>
+            <div class="docs__group">
+                <h3 class="subtitle">Инструменты разработчика:</h3>
+                <a href="#" class="docs__item">
+                    <div class="docs__icon"></div>
+                    <div class="docs__title">API АрхиГраф<b>.MDM</b></div>
+                </a>
             </div>
         </div>
     </section>
     <section class="sheets" id="4">
         <h2 class="title">Методические материалы</h2>
         <div class="sheets__wrapper">
-            <sheets__item>
-                <img src="" alt="" class="sheets__item-img">
-                <div class="sheets__item-title">Введение в&nbsp;онтологическое моделирование</div>
+            <div class="sheets__item">
+                <img src="./assets/img/sheet1.png" alt="sheet1" class="sheets__item-img">
+                <div class="sheets__item-title">Введение в&nbsp;онтологическое<br>моделирование</div>
                 <button class="download-btn">СКАЧАТЬ .pdf</button>
-            </sheets__item>
-            <sheets__item>
-                <img src="" alt="" class="sheets__item-img">
-                <div class="sheets__item-title">Онтологическое моделирование предприятий: методы и&nbsp;технологии</div>
+            </div>
+            <div class="sheets__item">
+                <img src="./assets/img/sheet2.png" alt="sheet2" class="sheets__item-img">
+                <div class="sheets__item-title">Онтологическое моделирование<br>предприятий: методы и&nbsp;технологии</div>
                 <button class="download-btn">СКАЧАТЬ .pdf</button>
-            </sheets__item>
+            </div>
         </div>
     </section>
+    <section class="subscribe" id="5">
+        <div class="subscribe__left"></div>
+        <div class="subscribe__right"></div>
+    </section>
+    <!-- <footer>
+        <p class="copyright">© Тринидата 2020</p>
+        <img src="./assets/img/logo_footer_rus.png" alt="logo" class="footer-logo">
+    </footer> -->
     
 </body>
 </html>
