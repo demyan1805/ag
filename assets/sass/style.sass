@@ -10,6 +10,23 @@ html
 p
     font-size: 16px
     line-height: 23px
+
+.mb--40
+    margin-bottom: 40px
+
+.title
+    font-family: 'Play', sans-serif
+    font-size: 45px
+    line-height: 52px
+    font-weight: bold
+    margin-bottom: 60px
+
+.subtitle
+    font-size: 22px
+    line-height: 27px
+    font-weight: 600
+    margin-bottom: 26px
+
 .header
     position: fixed
     height: 100vh
@@ -136,8 +153,8 @@ p
 
 
 
-section
-    padding-left: 239px
+// section
+//     padding-left: 239px
 
 .slider-screen
     display: flex
@@ -152,3 +169,23 @@ section
         &__logo
             position: absolute
             top: 85px
+
+.components
+    padding: 112px 240px
+
+.functionality
+    &__wrapper
+        display: flex
+        align-items: center
+    &__list
+        list-style: none
+        counter-reset: li
+        &-item
+            margin-bottom: 15px
+            &::before
+                counter-increment: li
+                content: counter(li)
+                display: inline-block
+                width: 29px
+                height: 27px
+                border: 1px solid $gray

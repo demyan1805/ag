@@ -9,6 +9,25 @@ p {
   line-height: 23px;
 }
 
+.mb--40 {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-family: 'Play', sans-serif;
+  font-size: 45px;
+  line-height: 52px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+.subtitle {
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: 600;
+  margin-bottom: 26px;
+}
+
 .header {
   position: fixed;
   height: 100vh;
@@ -205,10 +224,6 @@ p {
   color: #222222;
 }
 
-section {
-  padding-left: 239px;
-}
-
 .slider-screen {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -229,5 +244,36 @@ section {
 .slider-screen .slider__logo {
   position: absolute;
   top: 85px;
+}
+
+.components {
+  padding: 112px 240px;
+}
+
+.functionality__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.functionality__list {
+  list-style: none;
+  counter-reset: li;
+}
+
+.functionality__list-item {
+  margin-bottom: 15px;
+}
+
+.functionality__list-item::before {
+  counter-increment: li;
+  content: counter(li);
+  display: inline-block;
+  width: 29px;
+  height: 27px;
+  border: 1px solid #4C4C4C;
 }
 /*# sourceMappingURL=style.css.map */
