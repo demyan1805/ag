@@ -352,6 +352,10 @@ section
     justify-content: space-between
     margin-bottom: 60px
 
+    &--get
+        width: 658px
+        flex-direction: column
+
 .product
     width: 435px
     height: 157px
@@ -360,6 +364,7 @@ section
     align-items: center
     justify-content: center
     box-sizing: border-box
+    position: relative
 
     &__title
         font-family: 'Poiret One', cursive
@@ -373,9 +378,48 @@ section
     &__description
         margin-left: 16px
 
+    &__unavailable
+        position: absolute
+        bottom: 0
+        right: 0
+        height: 33px
+        background: #828282
+        color: $white
+        padding: 8px 11px
+
     &--active,
     &:hover
         border: 1px solid $black-text
+
+    &--disabled
+        filter: greyscale(100%)
+
+    &--get
+        width: auto
+        height: 112px
+        background: $white
+        justify-content: space-between
+        padding-left: 54px
+        padding-right: 70px
+        margin-top: 48px
+
+        &:hover
+            .download-icon:before
+                content: ''
+                display: block
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background: $yellow
+
+.download-icon
+    width: 18px
+    height: 24px
+    background-image: url('../img/down_arrow_black.svg')
+    margin-left: 26px
+    position: relative
 
 .mir
     color: #FC8215
@@ -402,6 +446,10 @@ section
         display: flex
         &:not(:last-child)
             margin-bottom: 22px
+
+        &:hover
+            .docs__icon
+                background-image: url('../img/down_arrow_white.svg')
 
     &__icon
         width: 16px
@@ -446,8 +494,12 @@ section
 
 .get
     &__right
+        color: $black-text
         background-image: url('../img/get_right_bg.svg')
         width: 50%
+        display: flex
+        flex-direction: column
+        padding: 170px 145px
         &--disabled
             &::after
                 content: ''
@@ -463,8 +515,58 @@ section
 
     &__left
         width: 586px
-.contact-form
-    display: flex
+
+    &__back-btn,
+    &__retry-btn
+        display: block
+        background: transparent
+        border: none
+        font-size: 14px
+        color: $white
+        border-bottom: 1px solid $yellow
+        padding: 2px 0
+
+    &__back-btn
+        display: none
+        margin-top: -28px
+        margin-bottom: 120px
+
+    &__retry-btn,
+    &__retry-timer
+        float: right
+
+    &__retry-timer
+        display: none
+
+    &__success-message
+        display: none
+        align-items: center
+        margin-top: 150px
+
+        &-icon
+            margin-right: 34px
+        &-text>p
+            font-size: 22px
+            line-height: 39px
+
+    &--contact
+        .contact-form
+            display: flex
+    &--code
+        .code-form
+            display: flex
+
+        .get__back-btn
+            display: block
+    &--success
+        .get__success-message
+            display: flex
+
+
+
+.contact-form,
+.code-form
+    display: none
     flex-direction: column
 
     .text
@@ -478,8 +580,7 @@ section
         padding-bottom: 17px
         font-size: 20px
         margin-top: 26px
-        &:not(:nth-child(3))
-            margin-bottom: 30px
+        margin-bottom: 30px
         &:hover
             border-bottom: 2px solid $white
 
@@ -493,8 +594,13 @@ section
         &:focus:invalid
             border-bottom: 2px solid #E21423
 
+.code-form
+    input
+        margin-bottom: 12px
 
-.email-error-message
+
+.email-error-message,
+.code-error-message
     width: 261px
     height: 32px
     font-size: 14px
@@ -502,9 +608,11 @@ section
     text-align: center
     background: #E21423
     margin-top: 8px
+    position: absolute
     display: none
 
-.send-btn
+.send-btn,
+.send-code-btn
     margin-top: 42px
     width: 198px
     height: 45px
@@ -515,6 +623,10 @@ section
     align-items: center
     color: $white
     align-self: flex-end
+    &--disabled
+        opacity: .4
+
+.send-btn
     &::after
         content: ''
         display: block
@@ -524,8 +636,6 @@ section
         flex-shrink: 0
         margin-left: 9px
 
-    &--disabled
-        opacity: .4
 
     
 

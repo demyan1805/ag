@@ -2,13 +2,12 @@ const slider = function(startSlide) {
     sliderControls = document.querySelector('.slider__controls');
     slides = document.querySelectorAll('.slide');
     controlItems = sliderControls.querySelectorAll('.slider__controls-item');
-    currentSlide = startSlide || 0;
+    currentSlide = startSlide;
 
     controlItems.forEach((element, index) => {
-        element.index = index
+        element.index = index;
         element.addEventListener('click', e => {
-            console.log(e.target)
-            setActiveSlide(e.target.index || e.target.parentNode.index)
+            setActiveSlide(e.target.index || e.target.parentNode.index);
         });
     });
 
@@ -28,9 +27,9 @@ const slider = function(startSlide) {
                 controlItems[i].className = 'slider__controls-item';
             }
         }
-    };
-    setActiveSlide(currentSlide);
+    }
 
+    setActiveSlide(currentSlide);
 };
 
 function scrollTipsChangeInit() {
@@ -72,7 +71,57 @@ function scrollTipsChangeInit() {
     });
 }
 
+const setActiveForm = function(formType) {
+    const getScreen = document.querySelector('.get');
+    switch (formType) {
+        case 'contact-form':
+            getScreen.className = 'get get--contact';
+            break;
+        
+        case 'code-form':
+            getScreen.className = 'get get--code';
+            break;
+
+        case 'success':
+            getScreen.className = 'get get--success';
+            break;
+    }
+}
+
+const startTimer = function(count) {
+    const wrapper = document.querySelector('.get__retry-timer');
+    const btn = document.querySelector('.get__retry-btn');
+    const value = wrapper.querySelector('.get__retry-timer-value');
+    let remaining = count*1000;
+    btn.style.display = 'none';
+    wrapper.style.display = 'block';
+
+    function tick(t) {
+        value.innerHTML = `${Math.floor(remaining/60)}:${remaining%60}`
+        setTimeout(() => {
+            remaining -= t;
+            console.log('aa');
+            
+        }, t);
+        return remaining;
+    }
+
+    while (remaining > 0) {
+        remaining = tick(1000);
+    }
+    
+
+    btn.style.display = 'block';
+    wrapper.style.display = 'none';
+
+
+}
+
+window.startTimer = startTimer;
+
+
 document.addEventListener('DOMContentLoaded', () => {
     scrollTipsChangeInit();
     slider(0);
+    // startTimer(75);
 })

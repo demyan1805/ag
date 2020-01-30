@@ -37,21 +37,21 @@
         <div class="slider__controls">
             <div class="slider__controls-item">
                 <p class="slider__controls-text">Дата-центрическая архитектура</p>
-                </div>
-                <div class="slider__controls-item">
-                    <p class="slider__controls-text">Адаптация к&nbsp;изменениям</p>
-                </div>
-                <div class="slider__controls-item">
-                    <p class="slider__controls-text">Независимость от&nbsp;производителей</p>
-                </div>
-                <div class="slider__controls-item">
-                    <p class="slider__controls-text">Итегрированное управление</p>
-                </div>
-                <div class="slider__controls-item">
-                    <p class="slider__controls-text">Быстрый доступ</p>
-                </div>
             </div>
-            <div class="slider-screen__right">
+            <div class="slider__controls-item">
+                <p class="slider__controls-text">Адаптация к&nbsp;изменениям</p>
+            </div>
+            <div class="slider__controls-item">
+                <p class="slider__controls-text">Независимость от&nbsp;производителей</p>
+            </div>
+            <div class="slider__controls-item">
+                <p class="slider__controls-text">Итегрированное управление</p>
+            </div>
+            <div class="slider__controls-item">
+                <p class="slider__controls-text">Быстрый доступ</p>
+            </div>
+        </div>
+        <div class="slider-screen__right">
         </div>
         <div class="slider">
             <div class="slide">
@@ -69,7 +69,7 @@
                     <div class="slide__description">Приложения готовы к&nbsp;изменению структуры данных</div>
                 </div>
                 <div class="slide__img-wrapper">
-                    <img src="./assets/img/slide1.png" alt="slide1" class="slide__img">
+                    <img src="./assets/img/slide2.png" alt="slide2" class="slide__img">
                 </div>
             </div>
             <div class="slide">
@@ -78,7 +78,7 @@
                     <div class="slide__description">Можно заменять любые приложения или саму платформу – данные и способы работы с ними останутся неизменными</div>
                 </div>
                 <div class="slide__img-wrapper">
-                    <img src="./assets/img/slide1.png" alt="slide1" class="slide__img">
+                    <img src="./assets/img/slide3.png" alt="slide3" class="slide__img">
                 </div>
             </div>
             <div class="slide">
@@ -87,7 +87,7 @@
                     <div class="slide__description">Платформа хранит правила доступа, преобразования данных, построения интерфейсов, которые должны выполнять приложения</div>
                 </div>
                 <div class="slide__img-wrapper">
-                    <img src="./assets/img/slide1.png" alt="slide1" class="slide__img">
+                    <img src="./assets/img/slide4.png" alt="slide4" class="slide__img">
                 </div>
             </div>
             <div class="slide">
@@ -96,7 +96,7 @@
                     <div class="slide__description">благодаря современным технологиям кластеризации и масштабирования</div>
                 </div>
                 <div class="slide__img-wrapper">
-                    <img src="./assets/img/slide1.png" alt="slide1" class="slide__img">
+                    <img src="./assets/img/slide5.png" alt="slide5" class="slide__img">
                 </div>
             </div>
         </div>
@@ -207,9 +207,10 @@
             </div>
         </div>
     </section>
-    <section class="get" id="5">
+    <section class="get get--code" id="5">
         <div class="get__left">
             <h2 class="title">Получить<br>демо-интерфейсы</h2>
+            <button class="get__back-btn">Вернуться</button>
             <form action="#" method="post" id="contact-data" class="contact-form">
                 <input type="text" name="name" id="name" placeholder="Имя" required> 
                 <input type="text" name="company" id="company" placeholder="Организация" required> 
@@ -218,14 +219,55 @@
                 <p class="text">Введите реальный e-mail адрес – на него будет отправлено письмо с кодом подтверждения</p>
                 <button type="submit" class="send-btn">ОТПРАВИТЬ</button>
             </form>
-            <!-- <form action="#" method="post" id="code-data" class="code-form">
-                <input type="text" name="code" id="code" placeholder=" Код из электронного письма" required> 
+            <form action="#" method="post" id="code-data" class="code-form">
+                <input type="text" name="code" id="code" placeholder="Код из электронного письма" required> 
                 <div class="code-error-message">Проверьте правильность кода</div>
-                <p class="text">Введите реальный e-mail адрес – на него будет отправлено письмо с кодом подтверждения</p>
+                <div class="get__retry-wrapper">
+                    <button class="get__retry-btn">Получить новый код</button>
+                    <div class="get__retry-timer">
+                        <span class="get__retry-timer-text">Получить новый код через:&nbsp;</span>
+                        <span class="get__retry-timer-value"></span>
+                    </div>
+                </div>
                 <button type="submit" class="send-code-btn">ГОТОВО</button>
-            </form> -->
+            </form>
+            <div class="get__success-message">
+                <div class="get__success-message-icon">
+                    <img src="./assets/img/done.svg" alt="done">
+                </div>
+                <div class="get__success-message-text">
+                    <p class="text">Спасибо!</p>
+                    <p class="text">Теперь вы можете скачать продукты</p>
+                </div>
+            </div>
         </div>
-        <div class="get__right"></div>
+        <div class="get__right">
+            <p class="subtitle">Контейнеры Docker для установки:</p>
+            <div class="products__wrapper--get">
+                <div class="product product--get">
+                    <div class="product__icon">
+                        <img src="./assets/img/ag_m.svg" alt="archigraph mir">
+                    </div>
+                    <div class="product__description">Редактор онтологий АрхиГраф.Мир</div>
+                    <div class="download-icon"></div>
+                </div>
+                <div class="product product--get">
+                    <div class="product__icon">
+                        <img src="./assets/img/ag_suz.svg" alt="archigraph suz">
+                    </div>
+                    <div class="product__description">Редактор правил АрхиГраф.СУЗ</div>
+                    <div class="download-icon"></div>
+                    <div class="product__unavailable">Демо-версия АрхиГраф.СУЗ временно недоступна</div>
+                </div>
+                <div class="product product--get">
+                    <div class="product__icon">
+                        <img src="./assets/img/ag_mdm.svg" alt="archigraph mdm">
+                    </div>
+                    <div class="product__description">API АрхиГраф.MDM (REST, GraphQL)</div>
+                    <div class="download-icon"></div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- <footer>
         <p class="copyright">© Тринидата 2020</p>
