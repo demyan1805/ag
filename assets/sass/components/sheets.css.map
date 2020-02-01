@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAIK,AAAD,gBAAU,CAAC;EACP,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,YAAY;CAAG;;AAEnC,AAAD,aAAO,CAAC;EACJ,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;CAKS;;AAH3B,AAAD,mBAAO,CAAC;EACJ,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,aAAa,EAAE,IAAI;CAAG",
+    "sources": [
+        "sheets.sass",
+        "vars.sass"
+    ],
+    "names": [],
+    "file": "sheets.css"
+}

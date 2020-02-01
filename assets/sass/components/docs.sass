@@ -1,0 +1,29 @@
+@import vars
+
+.docs
+    background: linear-gradient(202.95deg, rgba(255, 255, 255, 0.1) 13.87%, rgba(255, 255, 255, 0) 69.02%), #222222
+    color: $white
+
+    &__wrapper
+        display: flex
+
+    &__group
+        margin-right: 80px
+        width: 406px
+
+    &__item
+        display: flex
+        &:not(:last-child)
+            margin-bottom: 22px
+
+        &:hover
+            .docs__icon
+                background-image: url('../img/down_arrow_white.svg')
+
+    &__icon
+        width: 16px
+        height: 22px
+        margin-right: 18px
+        flex-shrink: 0
+        display: block
+        background-image: url('../img/down_arrow_yellow.svg')

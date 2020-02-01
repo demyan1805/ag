@@ -1,0 +1,23 @@
+@import vars
+
+.functionality
+    &__wrapper
+        display: flex
+    &__list
+        list-style: none
+        counter-reset: li
+        padding-left: 48px
+        &-item
+            margin-bottom: 15px
+            &::before
+                counter-increment: li
+                content: counter(li)
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                vertical-align: middle
+                margin-right: 19px
+                margin-left: -48px
+                width: 29px
+                height: 27px
+                border: 1px solid $gray

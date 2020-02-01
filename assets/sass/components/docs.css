@@ -1,0 +1,40 @@
+.docs {
+  background: linear-gradient(202.95deg, rgba(255, 255, 255, 0.1) 13.87%, rgba(255, 255, 255, 0) 69.02%), #222222;
+  color: #ffffff;
+}
+
+.docs__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.docs__group {
+  margin-right: 80px;
+  width: 406px;
+}
+
+.docs__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.docs__item:not(:last-child) {
+  margin-bottom: 22px;
+}
+
+.docs__item:hover .docs__icon {
+  background-image: url("../img/down_arrow_white.svg");
+}
+
+.docs__icon {
+  width: 16px;
+  height: 22px;
+  margin-right: 18px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: block;
+  background-image: url("../img/down_arrow_yellow.svg");
+}
+/*# sourceMappingURL=docs.css.map */

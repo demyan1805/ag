@@ -1,0 +1,119 @@
+.contact-form,
+.code-form {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-form .text,
+.code-form .text {
+  margin-top: 22px;
+}
+
+.contact-form input,
+.code-form input {
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 17px;
+  font-size: 20px;
+  margin-top: 26px;
+  margin-bottom: 30px;
+}
+
+.contact-form input:hover,
+.code-form input:hover {
+  border-bottom: 2px solid #ffffff;
+}
+
+.contact-form input::-webkit-input-placeholder,
+.code-form input::-webkit-input-placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
+.contact-form input:-ms-input-placeholder,
+.code-form input:-ms-input-placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
+.contact-form input::-ms-input-placeholder,
+.code-form input::-ms-input-placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
+.contact-form input::placeholder,
+.code-form input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
+.contact-form input:valid,
+.code-form input:valid {
+  border-bottom: 2px solid #F0C73F;
+}
+
+.contact-form input:focus:invalid,
+.code-form input:focus:invalid {
+  border-bottom: 2px solid #E21423;
+}
+
+.code-form input {
+  margin-bottom: 12px;
+}
+
+.email-error-message,
+.code-error-message {
+  width: 261px;
+  height: 32px;
+  font-size: 14px;
+  line-height: 32px;
+  text-align: center;
+  background: #E21423;
+  margin-top: 8px;
+  position: absolute;
+  display: none;
+}
+
+.send-btn,
+.send-code-btn {
+  margin-top: 42px;
+  width: 198px;
+  height: 45px;
+  background: transparent;
+  border: 1px solid #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.send-btn--disabled,
+.send-code-btn--disabled {
+  opacity: .4;
+}
+
+.send-btn::after {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 14px;
+  background-image: url("../img/right_arrow_white.svg");
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: 9px;
+}
+/*# sourceMappingURL=forms.css.map */

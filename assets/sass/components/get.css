@@ -1,0 +1,95 @@
+.get__right {
+  color: #222222;
+  background-image: url("../img/get_right_bg.svg");
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 170px 145px;
+}
+
+.get__right--disabled::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-mask-image: url("../img/get_right_bg.svg");
+          mask-image: url("../img/get_right_bg.svg");
+  background: #ffffff;
+  opacity: 0.3;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.get__left {
+  width: 586px;
+}
+
+.get__back-btn, .get__retry-btn {
+  display: block;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  color: #ffffff;
+  border-bottom: 1px solid #F0C73F;
+  padding: 2px 0;
+}
+
+.get__back-btn {
+  display: none;
+  margin-top: -28px;
+  margin-bottom: 120px;
+}
+
+.get__retry-btn, .get__retry-timer {
+  float: right;
+}
+
+.get__retry-timer {
+  display: none;
+}
+
+.get__success-message {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 150px;
+}
+
+.get__success-message-icon {
+  margin-right: 34px;
+}
+
+.get__success-message-text > p {
+  font-size: 22px;
+  line-height: 39px;
+}
+
+.get--contact .contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.get--code .code-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.get--code .get__back-btn {
+  display: block;
+}
+
+.get--success .get__success-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=get.css.map */

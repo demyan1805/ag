@@ -1,0 +1,71 @@
+@import vars
+
+.get
+    &__right
+        color: $black-text
+        background-image: url('../img/get_right_bg.svg')
+        width: 50%
+        display: flex
+        flex-direction: column
+        padding: 170px 145px
+        &--disabled
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                right: 0
+                top: 0
+                mask-image: url('../img/get_right_bg.svg')
+                background: $white
+                opacity: 0.3
+                z-index: 1
+                pointer-events: none
+
+    &__left
+        width: 586px
+
+    &__back-btn,
+    &__retry-btn
+        display: block
+        background: transparent
+        border: none
+        font-size: 14px
+        color: $white
+        border-bottom: 1px solid $yellow
+        padding: 2px 0
+
+    &__back-btn
+        display: none
+        margin-top: -28px
+        margin-bottom: 120px
+
+    &__retry-btn,
+    &__retry-timer
+        float: right
+
+    &__retry-timer
+        display: none
+
+    &__success-message
+        display: none
+        align-items: center
+        margin-top: 150px
+
+        &-icon
+            margin-right: 34px
+        &-text>p
+            font-size: 22px
+            line-height: 39px
+
+    &--contact
+        .contact-form
+            display: flex
+    &--code
+        .code-form
+            display: flex
+
+        .get__back-btn
+            display: block
+    &--success
+        .get__success-message
+            display: flex

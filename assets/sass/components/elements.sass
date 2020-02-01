@@ -1,0 +1,41 @@
+@import vars
+
+.download-icon
+    width: 18px
+    height: 24px
+    background-image: url('../img/down_arrow_black.svg')
+    margin-left: 26px
+    position: relative
+
+.mir
+    color: #FC8215
+    font-weight: bold
+.suz
+    color: #E21423
+    font-weight: bold
+.mdm
+    color: #571CA8
+    font-weight: bold
+
+.text
+    &--bordered
+        border-left: 1px solid $yellow
+
+
+.download-btn
+    width: 211px
+    height: 45px
+    background: $black-text
+    color: $white
+    display: flex
+    align-items: center
+    justify-content: center
+    &::after
+        content: ''
+        display: block
+        width: 16px
+        height: 22px
+        margin-left: 14px
+        background-image: url('../img/down_arrow_white.svg')
+        background-repeat: no-repeat
+

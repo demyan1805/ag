@@ -1,0 +1,73 @@
+@import vars
+
+.contact-form,
+.code-form
+    display: none
+    flex-direction: column
+
+    .text
+        margin-top: 22px
+
+    input
+        color: $white
+        background: transparent
+        border: none
+        border-bottom: 2px solid rgba(255, 255, 255, 0.4)
+        padding-bottom: 17px
+        font-size: 20px
+        margin-top: 26px
+        margin-bottom: 30px
+        &:hover
+            border-bottom: 2px solid $white
+
+        &::placeholder
+            font-family: 'Montserrat', sans-serif
+            font-size: 20px
+
+        &:valid
+            border-bottom: 2px solid $yellow
+
+        &:focus:invalid
+            border-bottom: 2px solid #E21423
+
+.code-form
+    input
+        margin-bottom: 12px
+
+
+.email-error-message,
+.code-error-message
+    width: 261px
+    height: 32px
+    font-size: 14px
+    line-height: 32px
+    text-align: center
+    background: #E21423
+    margin-top: 8px
+    position: absolute
+    display: none
+
+.send-btn,
+.send-code-btn
+    margin-top: 42px
+    width: 198px
+    height: 45px
+    background: transparent
+    border: 1px solid $white
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $white
+    align-self: flex-end
+    &--disabled
+        opacity: .4
+
+.send-btn
+    &::after
+        content: ''
+        display: block
+        width: 16px
+        height: 14px
+        background-image: url('../img/right_arrow_white.svg')
+        flex-shrink: 0
+        margin-left: 9px

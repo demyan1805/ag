@@ -72,7 +72,70 @@ function scrollTipsChangeInit() {
     });
 }
 
+const setActiveForm = function(formType) {
+    const getScreen = document.querySelector('.get');
+    switch (formType) {
+        case 'contact-form':
+            getScreen.className = 'get get--contact';
+            break;
+        
+        case 'code-form':
+            getScreen.className = 'get get--code';
+            break;
+
+        case 'success':
+            getScreen.className = 'get get--success';
+            break;
+    }
+}
+
+const startTimer = function(count) {
+    const wrapper = document.querySelector('.get__retry-timer');
+    const btn = document.querySelector('.get__retry-btn');
+    const value = wrapper.querySelector('.get__retry-timer-value');
+    let remaining = count*1000;
+    btn.style.display = 'none';
+    wrapper.style.display = 'block';
+
+    function tick(t) {
+        value.innerHTML = `${Math.floor(remaining/60)}:${remaining%60}`
+        setTimeout(() => {
+            remaining -= t;
+            console.log('aa');
+            
+        }, t);
+        return remaining;
+    }
+
+    while (remaining > 0) {
+        remaining = tick(1000);
+    }
+    
+
+    btn.style.display = 'block';
+    wrapper.style.display = 'none';
+
+
+}
+
+window.startTimer = startTimer;
+
+const demoForm = function() {
+    document.querySelector('.send-btn').addEventListener('click', () => {
+        setActiveForm('code-form');
+    });
+    document.querySelector('.send-code-btn').addEventListener('click', () => {
+        setActiveForm('success');
+    });
+    document.querySelector('.get__back-btn').addEventListener('click', () => {
+        setActiveForm('contact-form');
+    })
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
     scrollTipsChangeInit();
     slider(0);
+    demoForm();
+    // startTimer(75);
 })
