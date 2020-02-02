@@ -58,8 +58,8 @@
   border-bottom: 2px solid #F0C73F;
 }
 
-.contact-form input:focus:invalid,
-.code-form input:focus:invalid {
+.contact-form input.input--invalid,
+.code-form input.input--invalid {
   border-bottom: 2px solid #E21423;
 }
 
