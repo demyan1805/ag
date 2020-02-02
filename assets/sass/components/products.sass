@@ -11,8 +11,8 @@
 
 .product
     width: 30%
-    padding-top: 1.5rem
-    padding-bottom: 2rem
+    padding: 1.5rem
+    // padding-bottom: 2rem
     box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1)
     display: flex
     align-items: center
@@ -21,6 +21,9 @@
     position: relative
     cursor: pointer
     border: 1px solid transparent
+
+    &__img
+        object-fit: contain
 
     &__icon
         max-width: 3vw
@@ -101,6 +104,8 @@
         justify-content: flex-start
         align-items: flex-start
         padding: 17px
+        &__img
+            object-fit: contain
         &__icon
             max-width: none
             width: 47px
