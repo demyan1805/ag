@@ -2,24 +2,31 @@ const slider = function(startSlide) {
     sliderControls = document.querySelector('.slider__controls');
     slides = document.querySelectorAll('.slide');
     controlItems = sliderControls.querySelectorAll('.slider__controls-item');
-    currentSlide = startSlide || 0;
+    currentSlide = startSlide;
 
     controlItems.forEach((element, index) => {
-        element.index = index
+        element.index = index;
         element.addEventListener('click', e => {
-            console.log(e.target)
-            setActiveSlide(e.target.index || e.target.parentNode.index)
+            setActiveSlide(e.target.index || e.target.parentNode.index || 0);
         });
     });
 
+    document.querySelector('.prev-btn').addEventListener('click', () => {
+        setActiveSlide(--currentSlide);
+    })
+
+    document.querySelector('.next-btn').addEventListener('click', () => {
+        setActiveSlide(++currentSlide);
+    })
+
     function setActiveSlide(index) {
-        currentSlide = index;
+        currentSlide = (index >= slides.length ? 0 : index < 0 ? slides.length - 1 : index);
         for (let i = 0; i < slides.length; i++) {
-            if (i == index) {
+            if (i == currentSlide) {
                 slides[i].className = 'slide slide--active';
                 controlItems[i].className = 'slider__controls-item slider__controls-item--active';
             }
-            else if (i < index) {
+            else if (i < currentSlide) {
                 slides[i].className = 'slide slide--previous';
                 controlItems[i].className = 'slider__controls-item';
             }
@@ -28,12 +35,41 @@ const slider = function(startSlide) {
                 controlItems[i].className = 'slider__controls-item';
             }
         }
-    };
-    setActiveSlide(currentSlide);
+    }
 
+    setActiveSlide(currentSlide);
 };
 
-function scrollTipsChangeInit() {
+const tabs = function() {
+    tabsHeader = document.querySelectorAll('.js-tab');
+    tabsContent = document.querySelectorAll('.js-tab-content');
+
+    tabsHeader.forEach((element, index) => {
+        element.addEventListener('click', e => {
+            setActiveTab(e.target.closest('.js-tab'));
+        });
+    });
+
+    function setActiveTab(tab) {
+        tabsHeader.forEach((t, i) => {
+            if (tab == t) {
+                if (!t.classList.contains('tab--active')) {
+                    t.classList.add('tab--active');
+                }
+                tabsContent[i].classList.remove('tab--hidden');
+            } else {
+                if (!tabsContent[i].classList.contains('tab--hidden')) {
+                    tabsContent[i].classList.add('tab--hidden');
+                }
+                t.classList.remove('tab--active');
+            }
+        })
+    }
+
+
+}
+
+const scrollTipsChangeInit = function() {
     let activeScreen = 0;
     let scrollTips = document.querySelectorAll('.header__nav-item');
     let screenPositions = [];
@@ -93,49 +129,53 @@ const startTimer = function(count) {
     const wrapper = document.querySelector('.get__retry-timer');
     const btn = document.querySelector('.get__retry-btn');
     const value = wrapper.querySelector('.get__retry-timer-value');
-    let remaining = count*1000;
+    let remaining = count;
     btn.style.display = 'none';
     wrapper.style.display = 'block';
 
-    function tick(t) {
-        value.innerHTML = `${Math.floor(remaining/60)}:${remaining%60}`
-        setTimeout(() => {
-            remaining -= t;
-            console.log('aa');
-            
-        }, t);
-        return remaining;
+    function tick() {
+        let min = Math.floor(remaining / 60);
+        let sec = remaining % 60;
+        value.innerHTML = `${min < 10 ? '0' + min : min}:${sec < 10 ? '0' + sec : sec}`
+        if (remaining != 0) {
+            setTimeout(() => {
+                remaining--;
+                tick();                
+            }, 1000);
+        } else {
+            btn.style.display = 'block';
+            wrapper.style.display = 'none';
+            this.timerRunning = false;
+        }
     }
-
-    while (remaining > 0) {
-        remaining = tick(1000);
+    if (!this.timerRunning) {
+        tick();
+        this.timerRunning = true;
     }
-    
-
-    btn.style.display = 'block';
-    wrapper.style.display = 'none';
-
-
 }
-
-window.startTimer = startTimer;
 
 const demoForm = function() {
     document.querySelector('.send-btn').addEventListener('click', () => {
         setActiveForm('code-form');
+        startTimer(300);
     });
     document.querySelector('.send-code-btn').addEventListener('click', () => {
         setActiveForm('success');
     });
     document.querySelector('.get__back-btn').addEventListener('click', () => {
         setActiveForm('contact-form');
-    })
+    });
+    document.querySelector('.get__retry-btn').addEventListener('click', () => {
+        startTimer(300);
+    });
+    
 }
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    let timerRunning = false;
     scrollTipsChangeInit();
     slider(0);
     demoForm();
-    // startTimer(75);
+    tabs();
 })

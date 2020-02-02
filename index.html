@@ -17,41 +17,36 @@
             <p class="header__logo-title">АрхиГраф</p>
         </div>
         <div class="header__nav">
-            <a href="#1" class="header__nav-item header__nav-item--active"></a>
-            <a href="#2" class="header__nav-item"></a>
-            <a href="#3" class="header__nav-item"></a>
-            <a href="#4" class="header__nav-item"></a>
-            <a href="#5" class="header__nav-item"></a>
+            <div class="header__nav-item-wrapper">
+                <a href="#1" class="header__nav-item header__nav-item--active"><div class="header__nav-text">О&nbsp;платформе</div></a>
+            </div>
+            <div class="header__nav-item-wrapper">
+                <a href="#2" class="header__nav-item"><div class="header__nav-text">Компоненты платформы АрхиГраф</div></a>
+            </div>
+            <div class="header__nav-item-wrapper">
+                <a href="#3" class="header__nav-item"><div class="header__nav-text">Документация</div></a>
+            </div>
+            <div class="header__nav-item-wrapper">
+                <a href="#4" class="header__nav-item"><div class="header__nav-text">Методические материалы</div></a>
+            </div>
+            <div class="header__nav-item-wrapper">
+                <a href="#5" class="header__nav-item"><div class="header__nav-text">Демо-интерфейсы</div></a>
+            </div>
         </div>
-        <p class="header__title">Продукты компании <span class="text--bordered">ТриниДата</span></p>
+        <p class="header__title">Продукты компании <a href="#" class="text--bordered">ТриниДата</a></p>
         <div class="header__lang-selector">
-            <a href="#" class="header__lang-selector-item">RU</a>
+            <a href="#" class="header__lang-selector-item header__lang-selector-item--active">RU</a>
             <a href="#" class="header__lang-selector-item">EN</a>
         </div>
     </header>
     <section class="slider-screen" id="1">
         <div class="scroll-hint">
-            <img src="" alt="">
+            <img src="./assets/img/mouse.svg" alt="mouse" class="scroll-hint__icon">
+            <div class="scroll-hint__line"></div>
+            <div class="scroll-hint__text">Прокрутите вниз</div>
         </div>
         <img src="./assets/img/logo_big.png" alt="logo" class="slider__logo">
-        <div class="slider__controls">
-            <div class="slider__controls-item">
-                <p class="slider__controls-text">Дата-центрическая архитектура</p>
-                </div>
-                <div class="slider__controls-item">
-                    <p class="slider__controls-text">Адаптация к&nbsp;изменениям</p>
-                </div>
-                <div class="slider__controls-item">
-                    <p class="slider__controls-text">Независимость от&nbsp;производителей</p>
-                </div>
-                <div class="slider__controls-item">
-                    <p class="slider__controls-text">Итегрированное управление</p>
-                </div>
-                <div class="slider__controls-item">
-                    <p class="slider__controls-text">Быстрый доступ</p>
-                </div>
-            </div>
-            <div class="slider-screen__right">
+        <div class="slider-screen__right">
         </div>
         <div class="slider">
             <div class="slide">
@@ -69,7 +64,7 @@
                     <div class="slide__description">Приложения готовы к&nbsp;изменению структуры данных</div>
                 </div>
                 <div class="slide__img-wrapper">
-                    <img src="./assets/img/slide1.png" alt="slide1" class="slide__img">
+                    <img src="./assets/img/slide2.png" alt="slide2" class="slide__img">
                 </div>
             </div>
             <div class="slide">
@@ -78,7 +73,7 @@
                     <div class="slide__description">Можно заменять любые приложения или саму платформу – данные и способы работы с ними останутся неизменными</div>
                 </div>
                 <div class="slide__img-wrapper">
-                    <img src="./assets/img/slide1.png" alt="slide1" class="slide__img">
+                    <img src="./assets/img/slide3.png" alt="slide3" class="slide__img">
                 </div>
             </div>
             <div class="slide">
@@ -87,7 +82,7 @@
                     <div class="slide__description">Платформа хранит правила доступа, преобразования данных, построения интерфейсов, которые должны выполнять приложения</div>
                 </div>
                 <div class="slide__img-wrapper">
-                    <img src="./assets/img/slide1.png" alt="slide1" class="slide__img">
+                    <img src="./assets/img/slide4.png" alt="slide4" class="slide__img">
                 </div>
             </div>
             <div class="slide">
@@ -96,8 +91,27 @@
                     <div class="slide__description">благодаря современным технологиям кластеризации и масштабирования</div>
                 </div>
                 <div class="slide__img-wrapper">
-                    <img src="./assets/img/slide1.png" alt="slide1" class="slide__img">
+                    <img src="./assets/img/slide5.png" alt="slide5" class="slide__img">
                 </div>
+            </div>
+        </div>
+        <div class="slider__controls">
+            <div class="prev-btn"></div>
+            <div class="next-btn"></div>
+            <div class="slider__controls-item">
+                <p class="slider__controls-text">Дата-центрическая<br>архитектура</p>
+            </div>
+            <div class="slider__controls-item">
+                <p class="slider__controls-text">Адаптация<br>к&nbsp;изменениям</p>
+            </div>
+            <div class="slider__controls-item">
+                <p class="slider__controls-text">Независимость<br>от&nbsp;производителей</p>
+            </div>
+            <div class="slider__controls-item">
+                <p class="slider__controls-text">Итегрированное<br>управление</p>
+            </div>
+            <div class="slider__controls-item">
+                <p class="slider__controls-text">Быстрый<br>доступ</p>
             </div>
         </div>
     </section>
@@ -105,7 +119,7 @@
         <h2 class="title">Компоненты платформы АрхиГраф</h2>
         <h3 class="subtitle">Выберите продукт:</h3>
         <div class="products__wrapper">
-            <div class="product">
+            <div class="product js-tab tab--active">
                 <div class="product__icon">
                     <img src="./assets/img/ag_m.svg" alt="archigraph mir">
                 </div>
@@ -114,7 +128,7 @@
                     <p class="product__subtitle">Редактор онтологий</p>
                 </div>
             </div>
-            <div class="product">
+            <div class="product js-tab">
                 <div class="product__icon">
                     <img src="./assets/img/ag_suz.svg" alt="archigraph suz">
                 </div>
@@ -123,7 +137,7 @@
                     <p class="product__subtitle">Программный интерфейс<br>доступа к&nbsp;данным</p>
                 </div>
             </div>
-            <div class="product">
+            <div class="product js-tab">
                 <div class="product__icon">
                     <img src="./assets/img/ag_mdm.svg" alt="archigraph mdm">
                 </div>
@@ -133,30 +147,85 @@
                 </div>
             </div>
         </div>
-        <h3 class="subtitle">Назначение продукта АрхиГраф.Мир:</h3>
-        <p class="text mb--40 mw--half">Работа с&nbsp;онтологической моделью и&nbsp;данными, представленными в&nbsp;соответствии с&nbsp;ней. Быстрая обработка больших массивов данных в&nbsp;онтологической модели.</p>
-        <div class="functionality__wrapper">
-            <div class="functionality__description">
-                <h3 class="subtitle">Функциональность:</h3>
-                <ol class="functionality__list">
-                    <li class="functionality__list-item">Запросы на&nbsp;извлечение и&nbsp;редактирование любых объектов и&nbsp;модели данных при помощи REST API, SOAP-сервиса, очередей MQ.</li>
-                    <li class="functionality__list-item">Выполнение групповых операций с&nbsp;объектами.</li>
-                    <li class="functionality__list-item">Хранение объектов данных в&nbsp;любых внешних хранилищах.</li>
-                    <li class="functionality__list-item">Доступ ко&nbsp;всем данным с&nbsp;помощью точки доступа SPARQL.</li>
-                    <li class="functionality__list-item">Возможности геопоиска и&nbsp;полнотекстового поиска.</li>
-                    <li class="functionality__list-item">Подписки на&nbsp;обновление данных определенных классов.</li>
-                    <li class="functionality__list-item">Инструменты Data governance: поддержка процессов согласования изменений в&nbsp;модели и&nbsp;данных.</li>
-                    <li class="functionality__list-item">Разграничение прав доступа на&nbsp;уровне классов модели. Протоколирование доступа.</li>
-                    <li class="functionality__list-item">Работа в&nbsp;режиме кластера.</li>
-                    <li class="functionality__list-item">Историйность модели: возможность получить любое предыдущее состояние модели.</li>
-                    <li class="functionality__list-item">Историйность и&nbsp;прослеживание происхождения данных (Data lineage). API для получения истории изменений любого элемента данных.</li>
-                    <li class="functionality__list-item">Работа в&nbsp;режиме Логической витрины данных: извлечение информации из&nbsp;удаленных источников при помощи правил мэппинга элементов онтологии и&nbsp;структуры хранилища.</li>
-                </ol>
-            </div>
-            <div class="functionality__img">
-                <img src="./assets/img/functionality_img.png" alt="functionality">
+        <div class="js-tab-content">
+            <h3 class="subtitle">Назначение продукта АрхиГраф.Мир:</h3>
+            <p class="text mb--40 mw--half">Работа с&nbsp;онтологической моделью и&nbsp;данными, представленными в&nbsp;соответствии с&nbsp;ней. Быстрая обработка больших массивов данных в&nbsp;онтологической модели.</p>
+            <div class="functionality__wrapper">
+                <div class="functionality__description">
+                    <h3 class="subtitle">Функциональность:</h3>
+                    <ol class="functionality__list">
+                        <li class="functionality__list-item">Запросы на&nbsp;извлечение и&nbsp;редактирование любых объектов и&nbsp;модели данных при помощи <span class="text--highlight">REST API, SOAP-сервиса, очередей MQ.</span></li>
+                        <li class="functionality__list-item">Выполнение <span class="text--highlight">групповых операций</span> с&nbsp;объектами.</li>
+                        <li class="functionality__list-item">Хранение объектов данных в&nbsp;<span class="text--highlight">любых внешних хранилищах.</span></li>
+                        <li class="functionality__list-item">Доступ ко&nbsp;всем данным с&nbsp;помощью точки доступа <span class="text--highlight">SPARQL.</span></li>
+                        <li class="functionality__list-item">Возможности <span class="text--highlight">геопоиска и&nbsp;полнотекстового поиска.</span></li>
+                        <li class="functionality__list-item"><span class="text--highlight">Подписки</span> на&nbsp;обновление данных определенных классов.</li>
+                        <li class="functionality__list-item">Инструменты <span class="text--highlight">Data governance:</span> поддержка процессов согласования изменений в&nbsp;модели и&nbsp;данных.</li>
+                        <li class="functionality__list-item"><span class="text--highlight">Разграничение прав доступа</span> на&nbsp;уровне классов модели. Протоколирование доступа.</li>
+                        <li class="functionality__list-item">Работа в&nbsp;режиме <span class="text--highlight">кластера.</span></li>
+                        <li class="functionality__list-item"><span class="text--highlight">Историйность модели:</span> возможность получить любое предыдущее состояние модели.</li>
+                        <li class="functionality__list-item">Историйность и&nbsp;прослеживание происхождения данных <span class="text--highlight">(Data lineage).</span> API для получения истории изменений любого элемента данных.</li>
+                        <li class="functionality__list-item">Работа в&nbsp;режиме <span class="text--highlight">Логической витрины данных:</span> извлечение информации из&nbsp;удаленных источников при помощи правил мэппинга элементов онтологии и&nbsp;структуры хранилища.</li>
+                    </ol>
+                </div>
+                <div class="functionality__img">
+                    <img src="./assets/img/functionality_img.png" alt="functionality">
+                </div>
             </div>
         </div>
+        <div class="js-tab-content tab--hidden">
+            <h3 class="subtitle">Назначение продукта АрхиГраф.СУЗ:</h3>
+            <p class="text mb--40 mw--half">Работа с&nbsp;онтологической моделью и&nbsp;данными, представленными в&nbsp;соответствии с&nbsp;ней. Быстрая обработка больших массивов данных в&nbsp;онтологической модели.</p>
+            <div class="functionality__wrapper">
+                <div class="functionality__description">
+                    <h3 class="subtitle">Функциональность:</h3>
+                    <ol class="functionality__list">
+                        <li class="functionality__list-item">Запросы на&nbsp;извлечение и&nbsp;редактирование любых объектов и&nbsp;модели данных при помощи <span class="text--highlight">REST API, SOAP-сервиса, очередей MQ.</span></li>
+                        <li class="functionality__list-item">Выполнение групповых операций с&nbsp;объектами.</li>
+                        <li class="functionality__list-item">Хранение объектов данных в&nbsp;любых внешних хранилищах.</li>
+                        <li class="functionality__list-item">Доступ ко&nbsp;всем данным с&nbsp;помощью точки доступа SPARQL.</li>
+                        <li class="functionality__list-item">Возможности геопоиска и&nbsp;полнотекстового поиска.</li>
+                        <li class="functionality__list-item">Подписки на&nbsp;обновление данных определенных классов.</li>
+                        <li class="functionality__list-item">Инструменты Data governance: поддержка процессов согласования изменений в&nbsp;модели и&nbsp;данных.</li>
+                        <li class="functionality__list-item">Разграничение прав доступа на&nbsp;уровне классов модели. Протоколирование доступа.</li>
+                        <li class="functionality__list-item">Работа в&nbsp;режиме кластера.</li>
+                        <li class="functionality__list-item">Историйность модели: возможность получить любое предыдущее состояние модели.</li>
+                        <li class="functionality__list-item">Историйность и&nbsp;прослеживание происхождения данных (Data lineage). API для получения истории изменений любого элемента данных.</li>
+                        <li class="functionality__list-item">Работа в&nbsp;режиме Логической витрины данных: извлечение информации из&nbsp;удаленных источников при помощи правил мэппинга элементов онтологии и&nbsp;структуры хранилища.</li>
+                    </ol>
+                </div>
+                <div class="functionality__img">
+                    <img src="./assets/img/tab2.png" alt="functionality">
+                </div>
+            </div>
+        </div>
+        <div class="js-tab-content tab--hidden">
+            <h3 class="subtitle">Назначение продукта АрхиГраф.МДМ:</h3>
+            <p class="text mb--40 mw--half">Работа с&nbsp;онтологической моделью и&nbsp;данными, представленными в&nbsp;соответствии с&nbsp;ней. Быстрая обработка больших массивов данных в&nbsp;онтологической модели.</p>
+            <div class="functionality__wrapper">
+                <div class="functionality__description">
+                    <h3 class="subtitle">Функциональность:</h3>
+                    <ol class="functionality__list">
+                        <li class="functionality__list-item">Запросы на&nbsp;извлечение и&nbsp;редактирование любых объектов и&nbsp;модели данных при помощи <span class="text--highlight">REST API, SOAP-сервиса, очередей MQ.</span></li>
+                        <li class="functionality__list-item">Выполнение групповых операций с&nbsp;объектами.</li>
+                        <li class="functionality__list-item">Хранение объектов данных в&nbsp;любых внешних хранилищах.</li>
+                        <li class="functionality__list-item">Доступ ко&nbsp;всем данным с&nbsp;помощью точки доступа SPARQL.</li>
+                        <li class="functionality__list-item">Возможности геопоиска и&nbsp;полнотекстового поиска.</li>
+                        <li class="functionality__list-item">Подписки на&nbsp;обновление данных определенных классов.</li>
+                        <li class="functionality__list-item">Инструменты Data governance: поддержка процессов согласования изменений в&nbsp;модели и&nbsp;данных.</li>
+                        <li class="functionality__list-item">Разграничение прав доступа на&nbsp;уровне классов модели. Протоколирование доступа.</li>
+                        <li class="functionality__list-item">Работа в&nbsp;режиме кластера.</li>
+                        <li class="functionality__list-item">Историйность модели: возможность получить любое предыдущее состояние модели.</li>
+                        <li class="functionality__list-item">Историйность и&nbsp;прослеживание происхождения данных (Data lineage). API для получения истории изменений любого элемента данных.</li>
+                        <li class="functionality__list-item">Работа в&nbsp;режиме Логической витрины данных: извлечение информации из&nbsp;удаленных источников при помощи правил мэппинга элементов онтологии и&nbsp;структуры хранилища.</li>
+                    </ol>
+                </div>
+                <div class="functionality__img">
+                    <img src="./assets/img/tab3.png" alt="functionality">
+                </div>
+            </div>
+        </div>
+        <a href="#2" class="text--bordered">Вернуться к&nbsp;списку продуктов</a>
     </section>
     <section class="docs" id="3">
         <h2 class="title">Документация</h2>
@@ -207,9 +276,10 @@
             </div>
         </div>
     </section>
-    <section class="get" id="5">
+    <section class="get get--contact" id="5">
         <div class="get__left">
             <h2 class="title">Получить<br>демо-интерфейсы</h2>
+            <button class="get__back-btn">Вернуться</button>
             <form action="#" method="post" id="contact-data" class="contact-form">
                 <input type="text" name="name" id="name" placeholder="Имя" required> 
                 <input type="text" name="company" id="company" placeholder="Организация" required> 
@@ -218,19 +288,59 @@
                 <p class="text">Введите реальный e-mail адрес – на него будет отправлено письмо с кодом подтверждения</p>
                 <button type="submit" class="send-btn">ОТПРАВИТЬ</button>
             </form>
-            <!-- <form action="#" method="post" id="code-data" class="code-form">
-                <input type="text" name="code" id="code" placeholder=" Код из электронного письма" required> 
+            <form action="#" method="post" id="code-data" class="code-form">
+                <input type="text" name="code" id="code" placeholder="Код из электронного письма" required> 
                 <div class="code-error-message">Проверьте правильность кода</div>
-                <p class="text">Введите реальный e-mail адрес – на него будет отправлено письмо с кодом подтверждения</p>
+                <div class="get__retry-wrapper">
+                    <button class="get__retry-btn">Получить новый код</button>
+                    <div class="get__retry-timer">
+                        <span class="get__retry-timer-text">Получить новый код через:&nbsp;</span>
+                        <span class="get__retry-timer-value"></span>
+                    </div>
+                </div>
                 <button type="submit" class="send-code-btn">ГОТОВО</button>
-            </form> -->
+            </form>
+            <div class="get__success-message">
+                <div class="get__success-message-icon">
+                    <img src="./assets/img/done.svg" alt="done">
+                </div>
+                <div class="get__success-message-text">
+                    <p class="text">Спасибо!</p>
+                    <p class="text">Теперь вы можете скачать продукты</p>
+                </div>
+            </div>
         </div>
-        <div class="get__right"></div>
-    </section>
-    <!-- <footer>
-        <p class="copyright">© Тринидата 2020</p>
-        <img src="./assets/img/logo_footer_rus.png" alt="logo" class="footer-logo">
-    </footer> -->
-    
+        <div class="get__right">
+            <p class="subtitle">Контейнеры Docker для установки:</p>
+            <div class="products__wrapper--get">
+                <div class="product product--get">
+                    <div class="product__icon">
+                        <img src="./assets/img/ag_m.svg" alt="archigraph mir">
+                    </div>
+                    <div class="product__description">Редактор онтологий АрхиГраф.Мир</div>
+                    <div class="download-icon"></div>
+                </div>
+                <div class="product product--get product--disabled">
+                    <div class="product__icon">
+                        <img src="./assets/img/ag_suz.svg" alt="archigraph suz">
+                    </div>
+                    <div class="product__description">Редактор правил АрхиГраф.СУЗ</div>
+                    <div class="download-icon"></div>
+                    <div class="product__unavailable">Демо-версия АрхиГраф.СУЗ временно недоступна</div>
+                </div>
+                <div class="product product--get">
+                    <div class="product__icon">
+                        <img src="./assets/img/ag_mdm.svg" alt="archigraph mdm">
+                    </div>
+                    <div class="product__description">API АрхиГраф.MDM (REST, GraphQL)</div>
+                    <div class="download-icon"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="copyright">© Тринидата 2020</p>
+            <img src="./assets/img/logo_footer_rus.png" alt="logo" class="footer-logo">
+        </div>
+    </section>    
 </body>
 </html>

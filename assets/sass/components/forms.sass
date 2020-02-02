@@ -6,23 +6,23 @@
     flex-direction: column
 
     .text
-        margin-top: 22px
+        margin-top: 1.15vw
 
     input
         color: $white
         background: transparent
         border: none
         border-bottom: 2px solid rgba(255, 255, 255, 0.4)
-        padding-bottom: 17px
-        font-size: 20px
-        margin-top: 26px
-        margin-bottom: 30px
+        padding-bottom: 0.885vw
+        font-size: 1vw
+        margin-top: 1.35vw
+        margin-bottom: 1.5vw
         &:hover
             border-bottom: 2px solid $white
 
         &::placeholder
             font-family: 'Montserrat', sans-serif
-            font-size: 20px
+            font-size: 1vw
 
         &:valid
             border-bottom: 2px solid $yellow
@@ -71,3 +71,19 @@
         background-image: url('../img/right_arrow_white.svg')
         flex-shrink: 0
         margin-left: 9px
+
+
+@media screen and ( max-width: $mobile )
+    .contact-form,
+    .code-form
+        .text
+            margin-top: 24px
+
+        input
+            padding-bottom: 17px
+            font-size: 18px
+            margin-top: 20px
+            margin-bottom: 19px
+            &::placeholder
+                font-size: 18px
+

@@ -17,10 +17,11 @@ html
     color: $black-text
     font-family: 'Montserrat', sans-serif
     box-sizing: border-box
-    font-size: 0.83vw
-p
-    font-size: 1rem
-    line-height: 1.5rem
+    font-size: 16px
+p,
+span
+    font-size: 16px
+    line-height: 24px
 
 .mb--40
     margin-bottom: 40px
@@ -28,29 +29,36 @@ p
 .mw--half
     max-width: 50%
 
+.tab--hidden
+    display: none
+
+.tab--active
+    border: 1px solid $black-text
+
+
+
 .title
     font-family: 'Play', sans-serif
-    font-size: 2.3vw
-    line-height: 2.7vw
+    font-size: 2.5rem
+    line-height: 3rem
     font-weight: bold
     margin-bottom: 3.125vw
 
 .subtitle
-    font-size: 1.15vw
-    line-height: 1.45vw
+    font-size: 1.25rem
+    line-height: 1.75rem
     font-weight: 600
     margin-bottom: 1.35vw
 
 section
     padding: 6vw 12.5vw
     box-sizing: border-box
+    position: relative
 
 
 
 
 
-    &--disabled
-        opacity: .4
 
     
 
@@ -58,10 +66,38 @@ section
     height: 66px
     width: 100vw
     background: #121212
-    padding-left: 240px
-    padding-right: 100px
+    padding-left: 12.5vw
+    padding-right: 5vw
     display: flex
     justify-content: space-between
     align-items: center
     bottom: 0
+    position: absolute
+    left: 0
 
+
+@media screen and ( max-width: $mobile )
+    html,
+    p,  
+    span
+        font-size: 14px
+        line-height: 21px
+
+    section
+        padding: 40px 12px 60px
+
+    .title
+        font-size: 24px
+        line-height: 28px
+        margin-bottom: 26px
+    .subtitle
+        font-size: 18px
+        line-height: 21px
+        margin-bottom: 20px
+
+    .mw--half
+        max-width: none
+
+    .footer
+        padding: 0 12px
+    

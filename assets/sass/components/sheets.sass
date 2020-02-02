@@ -10,8 +10,27 @@
         display: flex
         flex-direction: column
         align-items: center
+        max-width: 50%
+        justify-content: flex-end
+
+        &-img
+            width: 100%
 
         &-title
             text-align: center
             font-weight: 600
             margin-bottom: 30px
+
+
+@media screen and ( max-width: $mobile )
+    .sheets
+        &__wrapper
+            flex-direction: column
+
+        &__item
+            max-width: none
+            &:not(:last-child)
+                margin-bottom: 55px
+
+            &-title
+                margin-top: -32px

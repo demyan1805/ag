@@ -9,7 +9,7 @@
 
 .contact-form .text,
 .code-form .text {
-  margin-top: 22px;
+  margin-top: 1.15vw;
 }
 
 .contact-form input,
@@ -18,10 +18,10 @@
   background: transparent;
   border: none;
   border-bottom: 2px solid rgba(255, 255, 255, 0.4);
-  padding-bottom: 17px;
-  font-size: 20px;
-  margin-top: 26px;
-  margin-bottom: 30px;
+  padding-bottom: 0.885vw;
+  font-size: 1vw;
+  margin-top: 1.35vw;
+  margin-bottom: 1.5vw;
 }
 
 .contact-form input:hover,
@@ -32,25 +32,25 @@
 .contact-form input::-webkit-input-placeholder,
 .code-form input::-webkit-input-placeholder {
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
+  font-size: 1vw;
 }
 
 .contact-form input:-ms-input-placeholder,
 .code-form input:-ms-input-placeholder {
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
+  font-size: 1vw;
 }
 
 .contact-form input::-ms-input-placeholder,
 .code-form input::-ms-input-placeholder {
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
+  font-size: 1vw;
 }
 
 .contact-form input::placeholder,
 .code-form input::placeholder {
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
+  font-size: 1vw;
 }
 
 .contact-form input:valid,
@@ -115,5 +115,35 @@
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-left: 9px;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-form .text,
+  .code-form .text {
+    margin-top: 24px;
+  }
+  .contact-form input,
+  .code-form input {
+    padding-bottom: 17px;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 19px;
+  }
+  .contact-form input::-webkit-input-placeholder,
+  .code-form input::-webkit-input-placeholder {
+    font-size: 18px;
+  }
+  .contact-form input:-ms-input-placeholder,
+  .code-form input:-ms-input-placeholder {
+    font-size: 18px;
+  }
+  .contact-form input::-ms-input-placeholder,
+  .code-form input::-ms-input-placeholder {
+    font-size: 18px;
+  }
+  .contact-form input::placeholder,
+  .code-form input::placeholder {
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=forms.css.map */

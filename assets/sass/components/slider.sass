@@ -12,13 +12,6 @@
     height: 100vh
     position: relative
 
-    .scroll-hint
-        height: 100px
-        width: 100%
-        background: $white
-        position: absolute
-        bottom: 0
-        left: 0
     &__left
         position: relative
     &__right
@@ -30,128 +23,232 @@
         background-image: url('../img/slider_right_bg.svg')
         background-size: cover
         background-repeat: no-repeat
-    .slider
+.slider
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+
+    &__logo
+        width: 7vw
+        height: 7vw
+
+    &__controls
+        width: 42%
+        height: 1px
+        background: $white
         position: absolute
-        width: 100%
-        height: 100%
-        top: 0
-        left: 0
+        bottom: 12vw
+        left: 12.5vw
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
 
-        &__logo
-            width: 7vw
-            height: 7vw
+        &-text
+            font-size: 0.725vw
+            line-height: 150%
 
-        &__controls
-            width: 42%
-            height: 1px
-            background: $white
-            position: absolute
-            bottom: 213px
-            left: 12.5vw
-            display: flex
-            justify-content: space-between
-            align-items: flex-end
-            z-index: 1
-
-            &-item
-                padding-bottom: 1.35vw
-                text-align: center
-                position: relative
+        &-item
+            padding-bottom: 1.35vw
+            text-align: center
+            position: relative
+            cursor: pointer
+            flex-grow: 1
+            &:last-child
+                flex-grow: 2
+            &::after
+                box-sizing: border-box
+                position: absolute
+                display: block
+                bottom: -2px
+                left: 50%
+                transform: translateX(-50%)
+                content: ''
+                width: 1.45vw
+                height: 4px
+                background: $black-text
+                border: 1px solid $white
+            &:hover,
+            &--active
+                font-weight: bold
                 &::after
+                    background: $white
+
+            &--active
+                &::after
+                    width: 2.4vw
+                    height: 0.4vw
+                    bottom: -0.2vw
+                &::before
                     box-sizing: border-box
+                    width: 3vw
+                    height: 1vw
                     position: absolute
                     display: block
-                    bottom: -2px
+                    bottom: -0.5vw
                     left: 50%
                     transform: translateX(-50%)
                     content: ''
-                    width: 1.45vw
-                    height: 4px
                     background: $black-text
                     border: 1px solid $white
-                &:hover,
-                &--active
-                    font-weight: bold
-                    &::after
-                        background: $white
 
+.slide
+    display: flex
+    padding-top: 6.25vw
+    position: absolute
+    top: 0
+    &__img
+        opacity: 0
+        transition: all 0.5s ease-in-out
+        width: 60%
+    &--previous
+        .slide__img
+            transform: translateX(-150%)
+            opacity: 0
+        .slide__text
+            opacity: 0
+
+
+    &--next
+        .slide__img
+            transform: translateX(150%)
+            opacity: 0
+        .slide__text
+            opacity: 0
+
+    &--active
+        .slide__img
+            transform: translateX(0px)
+            opacity: 1
+        .slide__text
+            opacity: 1
+
+    &__text
+        opacity: 0
+        max-width: 60%
+        padding-top: 8vw 
+        padding-left: 12.5vw 
+        padding-right: 9.3vw
+        transition: opacity 0.5s ease-in-out
+
+
+
+    &__img-wrapper
+        width: 40%
+        text-align: center
+        overflow: hidden
+
+    &__title,
+    &__description
+        font-size: 1.6vw
+        line-height: 1.9vw
+        font-weight: bold
+        font-family: 'Play', sans-serif
+        margin-bottom: 20px
+
+    &__title
+        font-size: 2.8vw
+        line-height: 3vw
+
+    &__title--main
+        margin-top: -16px
+        font-size: 6.3vw
+        line-height: 7.2vw
+
+
+@media screen and ( max-width: $mobile )
+    .slider-screen
+        height: auto
+        width: 100%
+        padding-bottom: 0
+
+        &__right
+            display: none
+            
+    .slider
+        position: relative
+        height: auto
+
+        &__logo
+            display: none
+
+        &__controls
+            width: 75%
+            bottom: auto
+            top: 18px
+
+            &-item
+                &:last-child
+                    flex-grow: 1
+
+                &::after
+                    width: 28px
                 &--active
                     &::after
-                        width: 2.4vw
-                        height: 0.4vw
-                        bottom: -0.2vw
+                        width: 28px
+                        height: 4px
+                        bottom: -2px
                     &::before
-                        box-sizing: border-box
-                        width: 3vw
-                        height: 1vw
-                        position: absolute
-                        display: block
-                        bottom: -0.5vw
-                        left: 50%
-                        transform: translateX(-50%)
-                        content: ''
-                        background: $black-text
-                        border: 1px solid $white
+                        width: 38px
+                        height: 12px
+                        bottom: -6px
+
+            &-text
+                display: none
+
+            .prev-btn,
+            .next-btn
+                position: absolute
+                width: 13px
+                height: 13px
+                border-bottom: 1px solid $white
+                border-left: 1px solid $white
+
+            .prev-btn
+                transform: translateY(50%) rotate(45deg)
+                left: -25px
+
+            .next-btn
+                transform: translateY(50%) rotate(-135deg)
+                right: -25px
 
     .slide
-        display: flex
-        padding-top: 6.25vw
-        position: absolute
-        top: 0
-        &__img
-            opacity: 0
-            transition: all 0.5s ease-in-out
-            width: 60%
-        &--previous
-            .slide__img
-                transform: translateX(-150%)
-                opacity: 0
-            .slide__text
-                opacity: 0
-
-
-        &--next
-            .slide__img
-                transform: translateX(150%)
-                opacity: 0
-            .slide__text
-                opacity: 0
-
-        &--active
-            .slide__img
-                transform: translateX(0px)
-                opacity: 1
-            .slide__text
-                opacity: 1
-
+        padding-top: 38px
+        flex-direction: column
+        align-items: center
         &__text
-            opacity: 0
-            max-width: 60%
-            padding-top: 8vw 
-            padding-left: 12.5vw 
-            padding-right: 9.3vw
-            transition: opacity 0.5s ease-in-out
-
-
+            max-width: none
+            padding: 0
+        &__title
+            font-size: 22px
+            line-height: 27px
+            margin-bottom: 9px
+            &--main
+                font-size: 41px
+                line-height: 47px
+                margin-bottom: 11px
+        &__description
+            font-size: 16px
+            line-height: 20px
+            margin-bottom: 60px
 
         &__img-wrapper
-            width: 40%
-            text-align: center
-            overflow: hidden
+            width: calc(100% + 24px)
+        &--active
+            position: relative
+            .slide__img-wrapper
+                position: relative
+                padding: 30px 0
+                &::before
+                    content: ''
+                    position: absolute
+                    display: block
+                    transform: rotate(90deg)
+                    width: 110%
+                    height: 115%
+                    top: -20px
+                    background-image: url('../img/slider_right_bg.svg')
+                    background-size: cover
 
-        &__title,
-        &__description
-            font-size: 1.6vw
-            line-height: 1.9vw
-            font-weight: bold
-            font-family: 'Play', sans-serif
-            margin-bottom: 20px
 
-        &__title
-            font-size: 2.8vw
-            line-height: 3vw
-
-        &__title--main
-            margin-top: -16px
-            font-size: 6.3vw
-            line-height: 7.2vw

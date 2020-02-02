@@ -1,13 +1,27 @@
 @import vars
 
 .get
+    .products__wrapper--get
+        .product
+            filter: grayscale(1)
+            pointer-events: none
+            cursor: not-allowed
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                width: 100%
+                height: 100%
+                background: rgba(255, 255, 255, .5)
+                left: 0
+
     &__right
         color: $black-text
         background-image: url('../img/get_right_bg.svg')
         width: 50%
         display: flex
         flex-direction: column
-        padding: 170px 145px
+        padding: 9vw 7.5vw
         &--disabled
             &::after
                 content: ''
@@ -22,7 +36,7 @@
                 pointer-events: none
 
     &__left
-        width: 586px
+        width: 40%
 
     &__back-btn,
     &__retry-btn
@@ -45,6 +59,9 @@
 
     &__retry-timer
         display: none
+        &-value
+            min-width: 46px
+            display: inline-block
 
     &__success-message
         display: none
@@ -69,3 +86,47 @@
     &--success
         .get__success-message
             display: flex
+
+        .products__wrapper--get
+            .product
+                filter: none
+                pointer-events: auto
+                cursor: auto
+                &::after
+                    display: none
+
+
+@media screen and ( max-width: $mobile )
+    .get
+        height: auto
+        flex-direction: column
+        padding-bottom: 66px
+
+        &__left
+            width: 100%
+
+        &__right
+            width: calc(100% + 24px)
+            overflow: hidden
+            position: relative
+            padding: 30px 12px
+            margin-left: -12px
+            margin-top: 40px
+            background-image: none
+            .subtitle
+                z-index: 1
+            &::before
+                content: ''
+                position: absolute
+                display: block
+                width: 110%
+                height: 120%
+                top: -20px
+                left: 0
+                background-image: linear-gradient(325.65deg, #FFF1B8 10.19%, #FFEC9C 39.74%, #FFEA8F 71.47%, #F6D64C 109.29%), linear-gradient(0deg, #FFEC9C, #FFEC9C), linear-gradient(0deg, #FFE574, #FFE574), linear-gradient(183.54deg, #FFE574 44.35%, #FFEC9C 92.17%)
+
+
+
+
+
+

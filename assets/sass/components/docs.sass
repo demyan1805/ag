@@ -9,7 +9,7 @@
 
     &__group
         margin-right: 80px
-        width: 406px
+        width: 28%
 
     &__item
         display: flex
@@ -21,9 +21,23 @@
                 background-image: url('../img/down_arrow_white.svg')
 
     &__icon
-        width: 16px
-        height: 22px
+        width: 17px
+        height: 23px
         margin-right: 18px
         flex-shrink: 0
         display: block
         background-image: url('../img/down_arrow_yellow.svg')
+
+
+@media screen and ( max-width: $mobile )
+    .docs
+        &__wrapper
+            flex-direction: column
+        &__group
+            width: 100%
+            margin-right: 0
+            &:not(:last-child)
+                margin-bottom: 40px
+        &__item
+            &:not(:last-child)
+                margin-bottom: 25px

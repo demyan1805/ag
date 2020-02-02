@@ -21,3 +21,18 @@
                 width: 29px
                 height: 27px
                 border: 1px solid $gray
+
+    &__img
+        min-width: 35%
+        img
+            width: 100%
+
+
+@media screen and ( max-width: $mobile )
+    .functionality
+        &__wrapper
+            flex-direction: column-reverse
+
+        &__img
+            margin-top: -10px
+            margin-bottom: 40px

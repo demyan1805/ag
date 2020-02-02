@@ -3,9 +3,19 @@
 .download-icon
     width: 18px
     height: 24px
-    background-image: url('../img/down_arrow_black.svg')
     margin-left: 26px
     position: relative
+    &::after
+        content: ''
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background-image: url('../img/down_arrow_black.svg')
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
 
 .mir
     color: #FC8215
@@ -21,6 +31,10 @@
     &--bordered
         border-left: 1px solid $yellow
 
+    &--highlight
+        background: #EEEEEE
+        border: 3px solid #EEEEEE
+
 
 .download-btn
     width: 211px
@@ -30,6 +44,7 @@
     display: flex
     align-items: center
     justify-content: center
+    border: none
     &::after
         content: ''
         display: block
@@ -39,3 +54,40 @@
         background-image: url('../img/down_arrow_white.svg')
         background-repeat: no-repeat
 
+    &:hover
+        opacity: 0.8
+
+.scroll-hint
+    height: 6vw
+    width: 100%
+    background: $white
+    position: absolute
+    bottom: 0
+    left: 0
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: center
+    padding-right: 40%
+    padding-top: 1.15vw
+
+    &__icon
+        height: 1.6vw
+    &__line
+        width: 1px
+        height: 100%
+        background: $black-text
+
+    &__text
+        position: absolute
+        bottom: 1.25vw
+        font-size: 0.625vw
+        line-height: 0.8vw
+        text-transform: uppercase
+        color: $black-text
+        background: $white
+
+
+@media screen and ( max-width: $mobile )
+    .scroll-hint
+        display: none

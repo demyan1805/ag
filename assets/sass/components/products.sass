@@ -6,57 +6,76 @@
     margin-bottom: 60px
 
     &--get
-        width: 658px
+        width: 100%
         flex-direction: column
 
 .product
     width: 30%
-    height: 157px
+    padding-top: 1.5rem
+    padding-bottom: 2rem
     box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1)
     display: flex
     align-items: center
     justify-content: center
     box-sizing: border-box
     position: relative
+    cursor: pointer
+    border: 1px solid transparent
+
+    &__icon
+        max-width: 3vw
+        img
+            width: 100%
 
     &__title
         font-family: 'Poiret One', cursive
-        font-size: 28px
-        line-height: 33px
-        margin-bottom: 7px
+        font-size: 1.45vw
+        line-height: 1.7vw
+        margin-bottom: 0.2vw
     &__subtitle
-        font-size: 13px
-        line-height: 18px
+        font-size: 0.675vw
+        line-height: 0.937vw
 
     &__description
-        margin-left: 16px
+        margin-left: 1rem
 
     &__unavailable
         position: absolute
         bottom: 0
         right: 0
-        height: 33px
+        height: 35%
         background: #828282
         color: $white
         padding: 8px 11px
+        font-size: 0.73vw
 
-    &--active,
     &:hover
         border: 1px solid $black-text
 
     &--disabled
-        filter: greyscale(100%)
+        filter: grayscale(100%)
+        cursor: not-allowed
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            width: 100%
+            height: 100%
+            background: rgba(255, 255, 255, .5)
 
     &--get
         width: auto
-        height: 112px
+        height: 5.8vw
         background: $white
         justify-content: space-between
-        padding-left: 54px
-        padding-right: 70px
-        margin-top: 48px
+        padding-left: 2.8vw
+        padding-right: 3.6vw
+        padding-top: 0
+        padding-bottom: 0
+        margin-top: 2.5vw
 
         &:hover
+            border: none
             .download-icon:before
                 content: ''
                 display: block
@@ -66,3 +85,66 @@
                 width: 100%
                 height: 100%
                 background: $yellow
+.components
+    .text--bordered
+        display: none
+
+
+@media screen and ( max-width: $mobile )
+    .products__wrapper
+        flex-direction: column
+        margin-bottom: 30px
+
+    .product
+        width: 100%
+        margin-bottom: 10px
+        justify-content: flex-start
+        align-items: flex-start
+        padding: 17px
+        &__icon
+            max-width: none
+            width: 47px
+            height: 47px
+
+        &__title
+            font-size: 20px
+            line-height: 23px
+            margin-bottom: 5px
+        &__subtitle
+            font-size: 12px
+            line-height: 18px
+
+        &__description
+            margin-left: 6px
+
+        &__unavailable
+            width: 100%
+            height: 54px
+            font-size: 14px
+            line-height: 19px
+            margin-bottom: -54px
+
+        &--disabled
+            margin-bottom: 67px
+
+        &--get
+            display: flex
+            align-items: center
+            height: 94px
+            .product__description,
+            .download-icon,
+            .product__icon
+                display: inline-block
+                max-width: 70%
+                font-size: 18px
+                line-height: 26px
+                font-weight: 600
+
+    .components
+        .text--bordered
+            display: inline-block
+            margin-top: 17px
+            border-left: 0
+            border-bottom: 1px solid $yellow
+
+            

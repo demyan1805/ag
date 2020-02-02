@@ -33,4 +33,25 @@
   height: 27px;
   border: 1px solid #4C4C4C;
 }
+
+.functionality__img {
+  min-width: 35%;
+}
+
+.functionality__img img {
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .functionality__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .functionality__img {
+    margin-top: -10px;
+    margin-bottom: 40px;
+  }
+}
 /*# sourceMappingURL=functionality.css.map */
