@@ -263,16 +263,14 @@
             <h2 class="title">Получить<br>демо-интерфейсы</h2>
             <button class="get__back-btn">Вернуться</button>
             <form action="#" method="post" id="contact-data" class="contact-form">
-                <input type="text" name="name" id="name" placeholder="Имя" required> 
-                <input type="text" name="company" id="company" placeholder="Организация" required> 
-                <input type="email" name="email" id="email" placeholder="E-mail" required> 
-                <div class="email-error-message">Проверьте правильность адреса</div>
+                <input type="text" name="name" id="name" placeholder="Имя" > 
+                <input type="text" name="company" id="company" placeholder="Организация" > 
+                <input type="email" name="email" id="email" placeholder="E-mail" error_message="Проверьте правильность адреса" > 
                 <p class="text">Введите реальный e-mail адрес – на него будет отправлено письмо с кодом подтверждения</p>
                 <button type="submit" class="send-btn">ОТПРАВИТЬ</button>
             </form>
             <form action="#" method="post" id="code-data" class="code-form">
-                <input type="text" name="code" id="code" placeholder="Код из электронного письма" required> 
-                <div class="code-error-message">Проверьте правильность кода</div>
+                <input type="text" name="code" id="code" placeholder="Код из электронного письма" error_message="Проверьте правильность кода" > 
                 <div class="get__retry-wrapper">
                     <button class="get__retry-btn">Получить новый код</button>
                     <div class="get__retry-timer">
