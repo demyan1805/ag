@@ -6,7 +6,7 @@ const slider = function(startSlide) {
     sliderScreen = document.querySelector('.slider-screen');
     startX = undefined;
     endX = undefined;
-    slidechowTimer = undefined;
+    slideshowTimer = undefined;
 
     controlItems.forEach((element, index) => {
         element.index = index;

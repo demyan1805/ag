@@ -1,14 +1,14 @@
 "use strict";
 
 var slider = function slider(startSlide) {
-  sliderControls = document.querySelector('.slider__controls');
-  slides = document.querySelectorAll('.slide');
-  controlItems = sliderControls.querySelectorAll('.slider__controls-item');
-  currentSlide = startSlide;
-  sliderScreen = document.querySelector('.slider-screen');
-  startX = undefined;
-  endX = undefined;
-  slidechowTimer = undefined;
+  var sliderControls = document.querySelector('.slider__controls');
+  var slides = document.querySelectorAll('.slide');
+  var controlItems = sliderControls.querySelectorAll('.slider__controls-item');
+  var currentSlide = startSlide;
+  var sliderScreen = document.querySelector('.slider-screen');
+  var startX = undefined;
+  var endX = undefined;
+  var slideshowTimer = undefined;
   controlItems.forEach(function (element, index) {
     element.index = index;
     element.addEventListener('click', function (e) {
@@ -72,8 +72,8 @@ var slider = function slider(startSlide) {
 };
 
 var tabs = function tabs() {
-  tabsHeader = document.querySelectorAll('.js-tab');
-  tabsContent = document.querySelectorAll('.js-tab-content');
+  var tabsHeader = document.querySelectorAll('.js-tab');
+  var tabsContent = document.querySelectorAll('.js-tab-content');
   tabsHeader.forEach(function (element, index) {
     element.addEventListener('click', function (e) {
       setActiveTab(e.target.closest('.js-tab'));
@@ -189,9 +189,9 @@ var startTimer = function startTimer(count) {
 };
 
 var contactFormValidation = function contactFormValidation() {
-  contactForm = document.getElementById('contact-data');
-  emailField = document.getElementById('email');
-  sendBtn = document.querySelector('.send-btn');
+  var contactForm = document.getElementById('contact-data');
+  var emailField = document.getElementById('email');
+  var sendBtn = document.querySelector('.send-btn');
   emailField.addEventListener('input', function () {
     if (emailField.validity.valid) {
       sendBtn.classList.remove('btn--disabled');
