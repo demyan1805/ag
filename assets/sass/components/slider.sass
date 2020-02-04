@@ -7,7 +7,7 @@
     color: $white
 
 .slider-screen
-    padding-top: 4.5vw
+    padding-top: 8vh
 
 .slider-screen,
 .get
@@ -44,7 +44,7 @@
         height: 1px
         background: $white
         position: absolute
-        bottom: 12vw
+        bottom: 14.8vh
         left: 12.5vw
         display: flex
         justify-content: space-between
@@ -100,7 +100,7 @@
 
 .slide
     display: flex
-    padding-top: 6.25vw
+    padding-top: 11vh
     position: absolute
     top: 0
     &__img
@@ -132,7 +132,7 @@
     &__text
         opacity: 0
         max-width: 60%
-        padding-top: 8vw 
+        padding-top: 14vh 
         padding-left: 12.5vw 
         padding-right: 9.3vw
         transition: opacity 0.5s ease-in-out
@@ -146,8 +146,8 @@
 
     &__title,
     &__description
-        font-size: 1.6vw
-        line-height: 1.9vw
+        font-size: 1.2vw
+        line-height: 1.4vw
         font-family: 'Play', sans-serif
         margin-bottom: 20px
 
@@ -164,28 +164,15 @@
 
 @media screen and ( max-width: 1440px )
     .slider-screen
-        padding-top: 100px
+        padding-top: 10vh
     .slide
-        padding-top: 200px
-        &__title
-            font-size: 38px
-            line-height: 42px
-            &--main
-                font-size: 88px
-        &__description
-            font-size: 22px
-            line-height: 27px
+        padding-top: 10vh
+        &__text
+            padding-top: 24vh
 
 @media screen and ( max-width: 1200px )
     .slider-screen
         max-height: 800px
-
-@media screen and ( max-width: 880px )
-    .slide
-        &__title
-            &--main
-                font-size: 60px
-    
 
 @media screen and ( max-width: $mobile )
     .slider-screen
