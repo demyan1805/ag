@@ -147,15 +147,15 @@ const setActiveForm = function(formType) {
     const getScreen = document.querySelector('.get');
     switch (formType) {
         case 'contact-form':
-            getScreen.className = 'get get--contact';
+            getScreen.className = 'get get--contact active';
             break;
         
         case 'code-form':
-            getScreen.className = 'get get--code';
+            getScreen.className = 'get get--code active';
             break;
 
         case 'success':
-            getScreen.className = 'get get--success';
+            getScreen.className = 'get get--success active';
             break;
     }
 }
