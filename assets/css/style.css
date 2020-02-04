@@ -1226,7 +1226,7 @@
   }
   .get__right::before {
     width: 100%;
-    height: 120%;
+    height: 115%;
     top: -20px;
     left: 0;
     background-image: linear-gradient(325.65deg, #FFF1B8 10.19%, #FFEC9C 39.74%, #FFEA8F 71.47%, #F6D64C 109.29%), linear-gradient(0deg, #FFEC9C, #FFEC9C), linear-gradient(0deg, #FFE574, #FFE574), linear-gradient(183.54deg, #FFE574 44.35%, #FFEC9C 92.17%);
