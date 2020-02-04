@@ -20,16 +20,20 @@
             .docs__icon
                 background-image: url('../img/down_arrow_white.svg')
 
+    &__title
+        line-height: 23px
+
     &__icon
         width: 17px
         height: 23px
         margin-right: 18px
         flex-shrink: 0
         display: block
+        background-size: contain
         background-image: url('../img/down_arrow_yellow.svg')
 
 
-@media screen and ( max-width: $mobile )
+@media screen and ( max-width: 1024px )
     .docs
         &__wrapper
             flex-direction: column
@@ -40,4 +44,4 @@
                 margin-bottom: 40px
         &__item
             &:not(:last-child)
-                margin-bottom: 25px
+                margin-bottom: 15px

@@ -6,6 +6,9 @@
     background: linear-gradient(214.79deg, rgba(255, 255, 255, 0.1) 13.87%, rgba(255, 255, 255, 0) 69.02%), linear-gradient(0deg, #222222, #222222), linear-gradient(56.24deg, #FFE989 8.41%, #D35DA4 87.89%)
     color: $white
 
+.slider-screen
+    padding-top: 4.5vw
+
 .slider-screen,
 .get
     display: flex
@@ -31,8 +34,10 @@
     left: 0
 
     &__logo
-        width: 7vw
-        height: 7vw
+        max-width: 7vw
+        max-height: 7vw
+        object-fit: contain
+        object-position: top
 
     &__controls
         width: 42%
@@ -71,11 +76,11 @@
                 border: 1px solid $white
             &:hover,
             &--active
-                font-weight: bold
                 &::after
                     background: $white
 
             &--active
+                font-weight: bold
                 &::after
                     width: 2.4vw
                     height: 0.4vw
@@ -101,7 +106,7 @@
     &__img
         opacity: 0
         transition: all 0.5s ease-in-out
-        width: 60%
+        max-width: 60%
     &--previous
         .slide__img
             transform: translateX(-150%)
@@ -143,25 +148,52 @@
     &__description
         font-size: 1.6vw
         line-height: 1.9vw
-        font-weight: bold
         font-family: 'Play', sans-serif
         margin-bottom: 20px
 
     &__title
+        font-weight: bold
         font-size: 2.8vw
         line-height: 3vw
 
     &__title--main
+        font-weight: bold
         margin-top: -16px
         font-size: 6.3vw
         line-height: 7.2vw
 
+@media screen and ( max-width: 1440px )
+    .slider-screen
+        padding-top: 100px
+    .slide
+        padding-top: 200px
+        &__title
+            font-size: 38px
+            line-height: 42px
+            &--main
+                font-size: 88px
+        &__description
+            font-size: 22px
+            line-height: 27px
+
+@media screen and ( max-width: 1200px )
+    .slider-screen
+        max-height: 800px
+
+@media screen and ( max-width: 880px )
+    .slide
+        &__title
+            &--main
+                font-size: 60px
+    
 
 @media screen and ( max-width: $mobile )
     .slider-screen
         height: auto
+        max-height: none
         width: 100%
         padding-bottom: 0
+        padding-top: 60px
 
         &__right
             display: none
@@ -174,9 +206,11 @@
             display: none
 
         &__controls
-            width: 75%
+            width: 90%
             bottom: auto
-            top: 18px
+            top: 48px
+            left: 50%
+            transform: translateX(-50%)
 
             &-item
                 &:last-child
@@ -220,35 +254,45 @@
         &__text
             max-width: none
             padding: 0
+            width: 100%
         &__title
-            font-size: 22px
-            line-height: 27px
+            font-size: 32px
+            line-height: 36px
             margin-bottom: 9px
             &--main
                 font-size: 41px
                 line-height: 47px
                 margin-bottom: 11px
         &__description
-            font-size: 16px
-            line-height: 20px
+            font-size: 22px
+            line-height: 27px
             margin-bottom: 60px
 
         &__img-wrapper
-            width: calc(100% + 24px)
+            width: 100vw
+            margin-left: -32px
+            margin-bottom: -20px
         &--active
             position: relative
             .slide__img-wrapper
                 position: relative
                 padding: 30px 0
+                margin-left: 0
                 &::before
                     content: ''
                     position: absolute
                     display: block
-                    transform: rotate(90deg)
-                    width: 110%
-                    height: 115%
+                    width: 100%
+                    height: 100%
                     top: -20px
-                    background-image: url('../img/slider_right_bg.svg')
+                    background-image: linear-gradient(325.65deg, #FFF1B8 10.19%, #FFEC9C 39.74%, #FFEA8F 71.47%, #F6D64C 109.29%), linear-gradient(0deg, #FFEC9C, #FFEC9C), linear-gradient(0deg, #FFE574, #FFE574), linear-gradient(183.54deg, #FFE574 44.35%, #FFEC9C 92.17%)
                     background-size: cover
 
+@media screen and ( max-width: 600px )
+    .slider
+        &__controls
+            width: 80%
+    .slide
+        &__img-wrapper
+            margin-left: -12px
 

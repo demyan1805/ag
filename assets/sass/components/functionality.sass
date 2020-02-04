@@ -24,15 +24,17 @@
 
     &__img
         min-width: 35%
+        text-align: right
         img
-            width: 100%
+            max-width: 100%
 
 
-@media screen and ( max-width: $mobile )
+@media screen and ( max-width: 1024px )
     .functionality
         &__wrapper
             flex-direction: column-reverse
 
         &__img
+            text-align: unset
             margin-top: -10px
             margin-bottom: 40px

@@ -24,6 +24,7 @@
 
     &__img
         object-fit: contain
+        max-width: 100%
 
     &__icon
         max-width: 3vw
@@ -46,18 +47,22 @@
         position: absolute
         bottom: 0
         right: 0
-        height: 35%
+        height: 30%
         background: #828282
         color: $white
         padding: 8px 11px
         font-size: 0.73vw
 
     &:hover
+        box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15)
         border: 1px solid $black-text
 
     &--disabled
         filter: grayscale(100%)
         cursor: not-allowed
+
+        .download-icon
+            display: none
         &::after
             content: ''
             display: block
@@ -70,12 +75,18 @@
         width: auto
         height: 5.8vw
         background: $white
-        justify-content: space-between
+        justify-content: flex-start
+        border: 0
         padding-left: 2.8vw
         padding-right: 3.6vw
         padding-top: 0
         padding-bottom: 0
         margin-top: 2.5vw
+
+        .product__description
+            font-size: 22px
+            font-weight: 600
+            line-height: 27px
 
         &:hover
             border: none

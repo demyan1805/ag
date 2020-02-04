@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Play|Poiret+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/scriptEs5.js"></script>
     <title>ArchiGraph</title>
 </head>
 <body>
@@ -33,13 +33,13 @@
                 <a href="#5" class="header__nav-item"><div class="header__nav-text">Демо-интерфейсы</div></a>
             </div>
         </div>
-        <p class="header__title">Продукты компании <a href="#" class="text--bordered">ТриниДата</a></p>
+        <p class="header__title">Продукты компании <a href="https://trinidata.ru/" class="text--bordered">ТриниДата</a></p>
         <div class="header__lang-selector">
-            <a href="#" class="header__lang-selector-item header__lang-selector-item--active">RU</a>
-            <a href="#" class="header__lang-selector-item">EN</a>
+            <a href="#" class="header__lang-selector-item">RU</a>
+            <a href="#" class="header__lang-selector-item header__lang-selector-item--active">EN</a>
         </div>
     </header>
-    <section class="slider-screen" id="1">
+    <section class="slider-screen active" id="1">
         <div class="scroll-hint">
             <img src="./assets/img/mouse.svg" alt="mouse" class="scroll-hint__icon">
             <div class="scroll-hint__line"></div>
@@ -365,7 +365,9 @@
         </div>
         <div class="footer">
             <p class="copyright">© Trinidata 2020</p>
-            <img src="./assets/img/logo_footer_eng.png" alt="logo" class="footer-logo">
+            <a href="https://trinidata.ru/">
+                <img src="./assets/img/logo_footer_eng.png" alt="logo" class="footer-logo">
+            </a>
         </div>
     </section>    
 </body>

@@ -1,5 +1,9 @@
 @import vars
 
+
+.input__wrapper
+    position: relative
+
 .contact-form,
 .code-form
     display: none
@@ -9,6 +13,7 @@
         margin-top: 1.15vw
 
     input
+        width: 100%
         color: $white
         background: transparent
         border: none
@@ -17,18 +22,31 @@
         font-size: 1vw
         margin-top: 1.35vw
         margin-bottom: 1.5vw
-        &:hover
+        &:hover,
+        &:valid
             border-bottom: 2px solid $white
 
         &::placeholder
             font-family: 'Montserrat', sans-serif
             font-size: 1vw
 
-        &:valid
-            border-bottom: 2px solid $yellow
+        &:placeholder-shown
+            border-bottom: 2px solid rgba(255, 255, 255, 0.4)
 
-        &.input--invalid
+        &:focus
+            border-bottom: 2px solid $yellow
+        &:focus:invalid,
+        &:invalid
             border-bottom: 2px solid #E21423
+            &::after
+                content: attr(error_message)
+                display: block
+                color: $white
+                background: #E21423
+            
+    #email:invalid ~ .email-error-message,
+    #code:invalid ~ .code-error-message
+        display: block
 
 .code-form
     input
@@ -37,13 +55,13 @@
 
 .email-error-message,
 .code-error-message
+    bottom: -8px
     width: 261px
     height: 32px
     font-size: 14px
     line-height: 32px
     text-align: center
     background: #E21423
-    margin-top: 8px
     position: absolute
     display: none
 
@@ -59,7 +77,11 @@
     align-items: center
     color: $white
     align-self: flex-end
+    &:hover
+        background: rgba(255, 255, 255, .05)
     &--disabled
+        cursor: not-allowed
+        pointer-events: none
         opacity: .4
 
 .send-btn
@@ -70,9 +92,15 @@
         height: 14px
         background-image: url('../img/right_arrow_white.svg')
         flex-shrink: 0
+        background-size: contain
         margin-left: 9px
 
+@media screen and ( max-width: 1024 )
+    .email-error-message,
+    .code-error-message
+        bottom: -18px
 
+    
 @media screen and ( max-width: $mobile )
     .contact-form,
     .code-form

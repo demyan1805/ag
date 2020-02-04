@@ -3,6 +3,10 @@ const slider = function(startSlide) {
     slides = document.querySelectorAll('.slide');
     controlItems = sliderControls.querySelectorAll('.slider__controls-item');
     currentSlide = startSlide;
+    sliderScreen = document.querySelector('.slider-screen');
+    startX = undefined;
+    endX = undefined;
+    slidechowTimer = undefined;
 
     controlItems.forEach((element, index) => {
         element.index = index;
@@ -13,11 +17,41 @@ const slider = function(startSlide) {
 
     document.querySelector('.prev-btn').addEventListener('click', () => {
         setActiveSlide(--currentSlide);
-    })
+    });
 
     document.querySelector('.next-btn').addEventListener('click', () => {
         setActiveSlide(++currentSlide);
-    })
+    });
+
+    sliderScreen.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        clearTimeout(slideshowTimer);
+    });
+
+    sliderScreen.addEventListener('touchend', (e) => {        
+        endX = e.changedTouches[0].clientX;
+        if (startX - endX > screen.width / 10) {
+            setActiveSlide(++currentSlide);
+        } else if (endX - startX > screen.width / 10) {
+            setActiveSlide(--currentSlide);
+        }
+        startSlideshow();
+    });
+
+    sliderScreen.addEventListener('mousedown', () => {
+        clearTimeout(slideshowTimer);
+    });
+
+    sliderScreen.addEventListener('mouseup', () => {
+        startSlideshow();
+    });
+
+    function startSlideshow() {
+        slideshowTimer = setTimeout(() => {
+            setActiveSlide(++currentSlide);
+            startSlideshow();
+        }, 5000)
+    }
 
     function setActiveSlide(index) {
         currentSlide = (index >= slides.length ? 0 : index < 0 ? slides.length - 1 : index);
@@ -38,6 +72,7 @@ const slider = function(startSlide) {
     }
 
     setActiveSlide(currentSlide);
+    startSlideshow();
 };
 
 const tabs = function() {
@@ -65,8 +100,6 @@ const tabs = function() {
             }
         })
     }
-
-
 }
 
 const scrollTipsChangeInit = function() {
@@ -101,7 +134,9 @@ const scrollTipsChangeInit = function() {
             }
         });
         activeScreen = index;
+        document.getElementById(`${index+1}`).classList.add('active');
     }
+    setActiveTip(0);
 
     window.addEventListener('scroll', e => {
         scrollTipChange(window.scrollY);
@@ -154,12 +189,31 @@ const startTimer = function(count) {
     }
 }
 
+const contactFormValidation = function() {
+    contactForm = document.getElementById('contact-data');
+    emailField = document.getElementById('email');
+    sendBtn = document.querySelector('.send-btn');
+
+    emailField.addEventListener('input', () => {
+        if (emailField.validity.valid) {
+            sendBtn.classList.remove('btn--disabled')
+        }
+    });
+    contactForm.addEventListener('submit', () => {
+        if (!emailField.validity.valid) {
+            sendBtn.classList.add('btn--disabled');
+        }
+    })
+}
+
 const demoForm = function() {
-    document.querySelector('.send-btn').addEventListener('click', () => {
+    document.getElementById('contact-data').addEventListener('submit', (e) => {
+        e.preventDefault();
         setActiveForm('code-form');
         startTimer(300);
     });
-    document.querySelector('.send-code-btn').addEventListener('click', () => {
+    document.getElementById('code-data').addEventListener('submit', (e) => {
+        e.preventDefault();
         setActiveForm('success');
     });
     document.querySelector('.get__back-btn').addEventListener('click', () => {
@@ -176,6 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerRunning = false;
     scrollTipsChangeInit();
     slider(0);
-    demoForm();
     tabs();
+    contactFormValidation();
+    demoForm();
 })

@@ -22,18 +22,7 @@
         display: flex
         flex-direction: column
         padding: 9vw 7.5vw
-        &--disabled
-            &::after
-                content: ''
-                display: block
-                position: absolute
-                right: 0
-                top: 0
-                mask-image: url('../img/get_right_bg.svg')
-                background: $white
-                opacity: 0.3
-                z-index: 1
-                pointer-events: none
+        
 
     &__left
         width: 40%
@@ -50,7 +39,7 @@
 
     &__back-btn
         display: none
-        margin-top: -28px
+        margin-top: -18px
         margin-bottom: 120px
 
     &__retry-btn,
@@ -71,8 +60,10 @@
         &-icon
             margin-right: 34px
         &-text>p
+            &:first-child
+                margin-bottom: 8px
             font-size: 22px
-            line-height: 39px
+            line-height: 29px
 
     &--contact
         .contact-form
@@ -96,21 +87,25 @@
                     display: none
 
 
-@media screen and ( max-width: $mobile )
+@media screen and ( max-width: 1024px )
     .get
         height: auto
         flex-direction: column
         padding-bottom: 66px
 
+        &__success-message
+            margin-top: 80px
+            margin-bottom: 60px
+
         &__left
             width: 100%
 
         &__right
-            width: calc(100% + 24px)
-            overflow: hidden
+            width: 100vw
             position: relative
-            padding: 30px 12px
-            margin-left: -12px
+            padding: 30px 70px
+            padding-left: 12.5vw
+            margin-left: -12.5vw
             margin-top: 40px
             background-image: none
             .subtitle
@@ -119,13 +114,30 @@
                 content: ''
                 position: absolute
                 display: block
-                width: 110%
+                width: 100%
                 height: 120%
                 top: -20px
                 left: 0
                 background-image: linear-gradient(325.65deg, #FFF1B8 10.19%, #FFEC9C 39.74%, #FFEA8F 71.47%, #F6D64C 109.29%), linear-gradient(0deg, #FFEC9C, #FFEC9C), linear-gradient(0deg, #FFE574, #FFE574), linear-gradient(183.54deg, #FFE574 44.35%, #FFEC9C 92.17%)
 
+@media screen and ( max-width: $mobile )
+    .get__right
+        position: relative
+        padding: 30px 32px
+        margin-left: -32px
 
+        &::before
+            width: 100%
+            height: 120%
+            top: -20px
+            left: 0
+            background-image: linear-gradient(325.65deg, #FFF1B8 10.19%, #FFEC9C 39.74%, #FFEA8F 71.47%, #F6D64C 109.29%), linear-gradient(0deg, #FFEC9C, #FFEC9C), linear-gradient(0deg, #FFE574, #FFE574), linear-gradient(183.54deg, #FFE574 44.35%, #FFEC9C 92.17%)
+
+@media screen and ( max-width: 600px )
+    .get__right
+        padding-left: 12px
+        padding-right: 12px
+        margin-left: -12px
 
 
 
